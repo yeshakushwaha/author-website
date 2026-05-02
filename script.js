@@ -1,42 +1,30 @@
-// MOBILE MENU
 const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
+const nav = document.getElementById("nav");
 
 hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("show");
+  hamburger.classList.toggle("active");
+  nav.classList.toggle("active");
 });
 
-// ACTIVE LINK ON SCROLL
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-link");
+
+// About Section
+const aboutSection = document.querySelector(".about-section");
 
 window.addEventListener("scroll", () => {
-  let current = "";
+  const position = aboutSection.getBoundingClientRect().top;
+  const screen = window.innerHeight;
 
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 150;
-    if (pageYOffset >= sectionTop) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach((link) => {
-    link.classList.remove("active");
-    if (link.getAttribute("href").includes(current)) {
-      link.classList.add("active");
-    }
-  });
+  if (position < screen - 100) {
+    aboutSection.classList.add("show");
+  }
 });
 
-// HERO TEXT ANIMATION
-const spans = document.querySelectorAll("#heroText span");
-
-spans.forEach((span, index) => {
-  setTimeout(() => {
-    span.style.transition = "0.6s ease";
-    span.style.opacity = "1";
-    span.style.transform = "translateY(0)";
-  }, index * 300);
+// Smooth scroll or CTA action
+document.querySelector(".cta-btn").addEventListener("click", () => {
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: "smooth"
+  });
 });
 
 // Work Section

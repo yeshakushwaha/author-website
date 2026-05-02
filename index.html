@@ -11,37 +11,63 @@
     />
   </head>
   <body>
-    <!-- HEADER -->
+    <!-- Header Section Start -->
     <header class="header">
-      <div class="logo">MyBook</div>
+      <div class="hero-container">
+        <!-- Logo -->
+        <div class="logo"><a href="./" class="nav-link active">Courage</a></div>
 
-      <nav class="nav" id="navMenu">
-        <a href="/" class="nav-link active">Home</a>
-        <a href="#about" class="nav-link">About Me</a>
-        <a href="#whatido" class="nav-link">What I Do</a>
-        <a href="#speaking" class="nav-link">Speaking</a>
-        <a href="#writing" class="nav-link">Writing</a>
-        <a href="#impact" class="nav-link">Impact</a>
-        <a href="#workwithme" class="nav-link">Work With Me</a>
-      </nav>
+        <!-- Nav -->
+        <nav class="nav" id="nav">
+          <a href="./" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About Me</a>
+          <a href="#whatido" class="nav-link">What I Do</a>
+          <a href="#speaking" class="nav-link">Speaking</a>
+          <a href="#writing" class="nav-link">Writing</a>
+          <a href="#impact" class="nav-link">Impact</a>
+          <a href="#workwithme" class="nav-link">Work With Me</a>
+        </nav>
 
-      <div class="hamburger" id="hamburger">☰</div>
+        <!-- Hamburger -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </header>
+    <!-- Header Section End -->
 
-    <!-- HERO -->
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h1 id="heroText">
-          <span>Lorem ipsum dolor sit amet</span><br />
-          <span>Donec scelerisque euismod</span><br />
-          <span>lectus sed porta.</span>
-        </h1>
+    <!-- Hero Section Start -->
+    <section class="hero">
+      <div class="hero-container2">
+        <!-- LEFT -->
+        <div class="hero-content">
+          <!-- <p class="intro">👋 HELLO! I'M Writer Name</p> -->
 
-        <a href="#workwithme" class="hero_btn">Let's Talk</a>
+          <h1>Storytelling with Strategy. Resilience with Results.</h1>
+
+          <p class="desc">
+            Helping brands and individuals find their voice through 24 years of
+            marketing mastery and the lessons of C for Courage.
+          </p>
+
+          <button class="cta-btn">LET’S TALK</button>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="hero-image">
+          <div class="image-border">
+            <div class="image-wrapper">
+              <img src="book.png" alt="" />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+    <!-- Hero Section End -->
 
-    <!-- ABOUT -->
+    <!-- About Section Start -->
     <section id="about" class="about">
       <!-- BACKGROUND -->
       <div class="about-bg"></div>
@@ -49,38 +75,37 @@
       <div class="about-wrapper">
         <!-- IMAGE -->
         <div class="about-image">
-          <img
-            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=387"
-            alt="About"
-          />
+          <img src="author.jpeg" alt="About" />
         </div>
 
         <!-- CONTENT -->
         <div class="about-content">
-          <span class="tag">ABOUT ME</span>
+          <span class="tag">My story</span>
 
           <h2>
-            Lorem ipsum dolor sit <br />
-            <span class="gradient-text"
-              >Integer id felis id tortor interdum interdum id ut nibh.</span
-            >
+            <span class="gradient-text">I am Meenakshi Mehta</span>
           </h2>
 
           <p>
-            Quisque hendrerit urna in leo viverra, at pellentesque libero
-            placerat. Quisque in eros nunc. In placerat augue libero, vel
-            feugiat lectus interdum consequat. Maecenas vitae luctus est.
+            With over 24 years of experience across diverse landscapes from
+            Wellness and Channel Marketing to Experiential Training - Meenakshi
+            is more than a professional; she is a weaver of dreams and a master
+            of detail.
           </p>
 
           <p>
-            Pellentesque habitant morbi tristique senectus et netus et malesuada
-            fames ac turpis egestas. In tristique dolor non metus molestie
-            mattis. Vivamus vel mi ut enim egestas consectetur in fermentum
-            ipsum.
+            Her life took a pivotal turn when she faced a profound battle with
+            cancer. What could have been a story of loss became a testament to
+            fierce resilience. Today, she blends her corporate expertise in
+            MarCom consulting with her personal journey of recovery to inspire
+            others. Whether she is crafting a marketing strategy or sharing her
+            story on stage, Meenakshi’s heart beats for transformation and
+            authentic storytelling.
           </p>
         </div>
       </div>
     </section>
+    <!-- About Section End -->
 
     <!-- Services Section -->
     <section class="services-section">
@@ -99,15 +124,14 @@
       <div class="right-content">
         <div class="faq-item">
           <div class="faq-question">
-            <h3>Illustrations</h3>
+            <h3>Storytelling & Strategy</h3>
             <span class="icon">+</span>
           </div>
           <div class="faq-answer">
             <div class="faq-answer-content">
               <p>
-                We create unique digital illustrations for branding, social
-                media, websites, and marketing campaigns with a modern creative
-                touch.
+                Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
+                massa mi. Aliquam in hendrerit urna.
               </p>
             </div>
           </div>
@@ -115,14 +139,14 @@
 
         <div class="faq-item">
           <div class="faq-question">
-            <h3>Web Design</h3>
+            <h3>Experiential Events</h3>
             <span class="icon">+</span>
           </div>
           <div class="faq-answer">
             <div class="faq-answer-content">
               <p>
-                Responsive, elegant, and conversion-focused website designs
-                tailored to your audience and aligned with your business goals.
+                Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
+                massa mi. Aliquam in hendrerit urna.
               </p>
             </div>
           </div>
@@ -130,15 +154,29 @@
 
         <div class="faq-item">
           <div class="faq-question">
-            <h3>Branding</h3>
+            <h3>Coffee Coaching</h3>
             <span class="icon">+</span>
           </div>
           <div class="faq-answer">
             <div class="faq-answer-content">
               <p>
-                Complete branding systems including logo design, typography,
-                visual identity, and brand guidelines for a strong market
-                presence.
+                Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
+                massa mi. Aliquam in hendrerit urna.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Speaking & Workshops</h3>
+            <span class="icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
+                massa mi. Aliquam in hendrerit urna.
               </p>
             </div>
           </div>
@@ -156,26 +194,26 @@
       <div class="case-study-grid">
         <div class="case-card">
           <img
-            src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&q=80"
+            src="https://i.pinimg.com/736x/aa/4c/9d/aa4c9d83d96375df5bb59b834a4d879a.jpg"
             alt="Digital Illustration"
           />
-          <h3>Digital Illustration</h3>
+          <h3>Creativity</h3>
         </div>
 
         <div class="case-card">
           <img
-            src="https://images.unsplash.com/photo-1611605698335-8b1569810432?auto=format&fit=crop&w=800&q=80"
+            src="https://i.pinimg.com/736x/e4/5b/f8/e45bf8550073f16c5c7b84af2d51abff.jpg"
             alt="Character Design"
           />
-          <h3>Character Design</h3>
+          <h3>Design</h3>
         </div>
 
         <div class="case-card">
           <img
-            src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80"
+            src="https://i.pinimg.com/736x/2a/43/1f/2a431f4ac6e23ec4d37d37494896b38e.jpg"
             alt="Editorial Illustration"
           />
-          <h3>Editorial Illustration</h3>
+          <h3>Illustration</h3>
         </div>
       </div>
     </section>
@@ -280,7 +318,7 @@
       <div class="blog-cards">
         <div class="blog-card">
           <img
-            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40"
+            src="https://i.pinimg.com/736x/18/eb/aa/18ebaa789441141cffb01c7f1120d7d8.jpg"
             alt=""
           />
           <div class="overlay"></div>
@@ -296,7 +334,7 @@
 
         <div class="blog-card">
           <img
-            src="https://images.unsplash.com/photo-1552664730-d307ca884978"
+            src="https://i.pinimg.com/1200x/62/bc/de/62bcde6954de1366bcd198d22f762905.jpg"
             alt=""
           />
           <div class="overlay"></div>
@@ -368,8 +406,8 @@
       <div class="footer-container">
         <div class="footer-top">
           <div class="footer-left">
-            <h2>Nunc ornare aliquet lacus</h2>
-            <p>Vivamus non nulla in lorem congue facilisis id eget ligula.</p>
+            <h2>C for Courage: A Journey of Resilience and Recovery</h2>
+            <p>In this book "C for Courage", Meenakshi Mehta invites readers into her deeply personal journey of battling cancer with unwavering strength and grace.</p>
           </div>
 
           <div class="footer-buttons">
