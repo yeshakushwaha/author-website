@@ -128,3 +128,4 @@ faqItems.forEach((item) => {
     }
   });
 });
+
