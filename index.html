@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MyBook Website</title>
+    <title>Meenakshi Meheta | Author & Speaker</title>
+
     <link rel="stylesheet" href="style.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -12,58 +14,80 @@
   </head>
   <body>
     <!-- Header Section Start -->
-    <header class="header">
-      <div class="hero-container">
-        <!-- Logo -->
-        <div class="logo"><a href="./" class="nav-link active">Courage</a></div>
-
-        <!-- Nav -->
-        <nav class="nav" id="nav">
-          <a href="./" class="nav-link active">Home</a>
-          <a href="#about" class="nav-link">About Me</a>
-          <a href="#whatido" class="nav-link">What I Do</a>
-          <a href="#speaking" class="nav-link">Speaking</a>
-          <a href="#writing" class="nav-link">Writing</a>
-          <a href="#impact" class="nav-link">Impact</a>
-          <a href="#workwithme" class="nav-link">Work With Me</a>
-        </nav>
-
-        <!-- Hamburger -->
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+    <header class="navbar">
+      <div class="logo">
+        <a href="#"><img src="img/logo.png" width="140" alt="Logo" /></a>
       </div>
+
+      <nav id="navMenu">
+        <a href="#about">About</a>
+        <a href="#">What I Do</a>
+        <a href="#">Speaking</a>
+        <a href="#">Writing</a>
+        <a href="#">In The News</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <div class="menu-btn" id="menuBtn">☰</div>
     </header>
     <!-- Header Section End -->
 
     <!-- Hero Section Start -->
     <section class="hero">
-      <div class="hero-container2">
-        <!-- LEFT -->
-        <div class="hero-content">
-          <h1>Storytelling with Strategy. Resilience with Results.</h1>
+      <div class="scroll-text">
+        <div class="scroll-track">
+          <span
+            >AUTHOR. LEADER. SPEAKER. STORY TELLER. AWARD WINNER. AUTHOR.
+            LEADER. SPEAKER. STORY TELLER. AWARD WINNER. AUTHOR. LEADER.
+            SPEAKER. STORY TELLER. AWARD WINNER.</span
+          >
+        </div>
+      </div>
 
-          <p class="desc">
-            Helping brands and individuals find their voice through 24 years of
-            marketing mastery and the lessons of C for Courage.
-          </p>
-
-          <button class="cta-btn">LET’S TALK</button>
+      <div class="hero-content">
+        <div class="content">
+          <div class="head_buttons">
+            <a href="#" class="btn1 primary btn-fill">Book a Discovery call</a>
+            <a href="#" class="btn1 secondary btn-outline">Let’s Chat</a>
+          </div>
         </div>
 
-        <!-- RIGHT VIDEO -->
-        <div class="hero-video">
-          <div class="video-wrapper">
-            <video autoplay muted loop playsinline>
-              <source src="img/book.mp4" type="video/mp4" />
-            </video>
-          </div>
+        <div class="hero-image">
+          <img src="img/author.png" alt="Person" />
         </div>
       </div>
     </section>
     <!-- Hero Section End -->
+
+    <!-- Featured Section Start -->
+    <section class="featured-section">
+      <div class="featured-content">
+        <h2>As featured in</h2>
+      </div>
+
+      <div class="logo-slider">
+        <div class="logo-track">
+          <!-- First Set -->
+          <img src="img/logo-01.png" alt="" />
+          <img src="img/logo-02.png" alt="" />
+          <img src="img/logo-03.png" alt="" />
+          <img src="img/logo-04.png" alt="" />
+
+          <!-- Duplicate Set -->
+          <img src="img/logo-01.png" alt="" />
+          <img src="img/logo-02.png" alt="" />
+          <img src="img/logo-03.png" alt="" />
+          <img src="img/logo-04.png" alt="" />
+
+          <!-- Duplicate Set -->
+          <img src="img/logo-01.png" alt="" />
+          <img src="img/logo-02.png" alt="" />
+          <img src="img/logo-03.png" alt="" />
+          <img src="img/logo-04.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- Featured Section End -->
 
     <!-- About Section Start -->
     <section id="about" class="about">
@@ -73,7 +97,7 @@
       <div class="about-wrapper">
         <!-- IMAGE -->
         <div class="about-image">
-          <img src="img/author.jpeg" alt="About" />
+          <img src="img/meenakshi_mehta.png" alt="About" />
         </div>
 
         <!-- CONTENT -->
@@ -105,16 +129,14 @@
     </section>
     <!-- About Section End -->
 
-    <!-- Services Section -->
+    <!-- Services Section Start -->
     <section class="services-section">
       <!-- LEFT CONTENT -->
       <div class="left-content">
         <h2>My professional design services</h2>
         <div class="red-line"></div>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
-          Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla,
-          mattis ligula consectetur, ultrices mauris.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis tincidunt urna. Quisque elit nisi, viverra sed velit at, sollicitudin maximus tortor. Etiam a mi eget metus ultricies elementum. Fusce malesuada tortor sapien, non ornare purus porttitor at.
         </p>
       </div>
 
@@ -181,6 +203,7 @@
         </div>
       </div>
     </section>
+    <!-- Services Section End -->
 
     <!-- Testimonial Section Start -->
     <section class="testimonial-section" id="impact">
@@ -268,115 +291,128 @@
         </div>
       </div>
     </section>
+    <!-- Testimonial Section End -->
 
-    <!-- Case Study Section -->
-    <section class="case-study-section" id="speaking">
-      <div class="case-study-badge">Case Study</div>
-      <h2 class="case-study-title">
-        Illustration <br />Tailored to Your Needs
-      </h2>
+    <!-- Featured Youtube Links Section Start -->
+    <section class="listening-section">
+      <h2>Featured Talks</h2>
 
-      <div class="case-study-grid">
-        <div class="case-card">
-          <img src="img/1.png" alt="Digital Illustration" />
-          <a
-            href="https://www.youtube.com/watch?v=q1YAsWGuGFk&t=1476s"
-            target="_blank"
-            ><h3>Celebrate Women's Day</h3></a
-          >
+      <div class="video-grid">
+        <div class="video-card">
+          <iframe
+            width="800"
+            height="439"
+            src="https://www.youtube.com/embed/q1YAsWGuGFk"
+            title="Celebrate Women&#39;s Day 2024 : Unleash Your Inner Warrior!"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
         </div>
 
-        <div class="case-card">
-          <img src="img/2.png" alt="Character Design" />
-          <a href="https://www.youtube.com/watch?v=1L503F44CD0" target="_blank"
-            ><h3>Empower Cancer Awareness in Corporates</h3></a
-          >
+        <div class="video-card">
+          <iframe
+            width="780"
+            height="439"
+            src="https://www.youtube.com/embed/1L503F44CD0"
+            title="Empower Cancer Awareness in Corporates"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
         </div>
 
-        <div class="case-card">
-          <img src="img/3.png" alt="Editorial Illustration" />
-          <a
-            href="https://www.youtube.com/watch?v=I2kYqhq9Ayc&t=1741s"
-            target="_blank"
-            ><h3>Empower Cancer Awareness in Corporate</h3></a
-          >
+        <div class="video-card">
+          <iframe
+            width="780"
+            height="439"
+            src="https://www.youtube.com/embed/I2kYqhq9Ayc"
+            title="Empower Cancer Awareness in Corporate - Episode 4"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
         </div>
 
-        <div class="case-card">
-          <img src="img/4.png" alt="Character Design" />
-          <a href="https://www.youtube.com/watch?v=ph7F80LHODc" target="_blank"
-            ><h3>Meenakshi Mehta</h3></a
-          >
+        <div class="video-card">
+          <iframe
+            width="780"
+            height="439"
+            src="https://www.youtube.com/embed/ph7F80LHODc"
+            title="Meenakshi Mehta"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
         </div>
 
-        <div class="case-card">
-          <img src="img/5.png" alt="Editorial Illustration" />
-          <a href="https://www.youtube.com/watch?v=NHt5I8dw0eM" target="_blank"
-            ><h3>Tumorously Yours: S1 Ep 17: Meenakshi</h3></a
-          >
+        <div class="video-card">
+          <iframe
+            width="780"
+            height="439"
+            src="https://www.youtube.com/embed/NHt5I8dw0eM"
+            title="Tumorously Yours: S1 Ep 17:  Meenakshi"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </section>
+    <!-- Featured Youtube Links Section End -->
 
-    <!-- Work Section -->
-    <section class="playground" id="whatido">
-      <div class="container">
-        <span class="tag2">What I Do</span>
-        <h2 class="title">My Paintings</h2>
-
-        <div class="grid">
-          <div class="card">
-            <img
-              src="https://i.pinimg.com/736x/68/d9/9e/68d99ecd78dd56868b5a1d56986d70cf.jpg"
-              alt=""
-            />
-          </div>
-
-          <div class="card">
-            <img
-              src="https://i.pinimg.com/736x/d8/30/7a/d8307aab6ce1ff7671674ffecc8c9a8f.jpg"
-              alt=""
-            />
-          </div>
-
-          <div class="card">
-            <img
-              src="https://i.pinimg.com/736x/cf/a1/ce/cfa1ce43c0a4befc474e3012c5510cb6.jpg"
-              alt=""
-            />
-          </div>
-
-          <div class="card">
-            <img
-              src="https://i.pinimg.com/736x/6b/21/9c/6b219c5c4211a854833abea96fe55db4.jpg"
-              alt=""
-            />
-          </div>
-
-          <div class="card">
-            <img
-              src="https://i.pinimg.com/736x/96/76/74/9676741b08917ca77b530a6c58ee31b1.jpg"
-              alt=""
-            />
-          </div>
-
-          <div class="card">
-            <img
-              src="https://i.pinimg.com/736x/e9/4c/d3/e94cd393c40dd1cd3aafcb277777dbd3.jpg"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Blog Section -->
+    <!-- Blog Section Start -->
     <section class="blog-section">
       <!-- Top Content -->
       <div class="blog-header">
         <div class="blog-left">
           <span class="tag2">Our Blogs</span>
-          <h2>Lorem ipsum <br />dolor sit amet</h2>
+          <h2>My Newest <br />Release Blogs</h2>
         </div>
 
         <div class="blog-right">
@@ -396,55 +432,59 @@
       <div class="blog-cards">
         <div class="blog-card">
           <img
-            src="https://i.pinimg.com/736x/18/eb/aa/18ebaa789441141cffb01c7f1120d7d8.jpg"
+            src="https://cforcourage.wordpress.com/wp-content/uploads/2025/04/pexels-photo-4386467.jpeg"
             alt=""
           />
           <div class="overlay"></div>
           <div class="blog-content">
             <span class="category">MyBook</span>
-            <h3>Lorem ipsum dolor sit amet consectetur</h3>
+            <a href="https://cforcourage.wordpress.com/2025/04/08/world-health-day-health-is-hope-and-hope-is-everything/" target="_blank">
+              <h3>World Health Day – Health is Hope, and Hope is Everything</h3> </a>
             <div class="meta">
-              <span><i class="fa-regular fa-user"></i> John</span>
-              <span><i class="fa-regular fa-calendar"></i> March 15, 2026</span>
+              <span><i class="fa-regular fa-user"></i> Meenakshi Mehta</span>
+              <span><i class="fa-regular fa-calendar"></i> April 8, 2025</span>
             </div>
           </div>
         </div>
 
         <div class="blog-card">
           <img
-            src="https://i.pinimg.com/1200x/62/bc/de/62bcde6954de1366bcd198d22f762905.jpg"
+            src="https://cforcourage.wordpress.com/wp-content/uploads/2024/04/book-cover.jpeg"
             alt=""
           />
           <div class="overlay"></div>
           <div class="blog-content">
             <span class="category">MyBook</span>
-            <h3>Lorem ipsum dolor sit amet consectetur</h3>
+            <a href="https://cforcourage.wordpress.com/2025/04/03/book-reading-a-heartfull-evening/" target="_blank">
+              <h3>Book Reading:  A Heartfull Evening  </h3> </a>
             <div class="meta">
-              <span><i class="fa-regular fa-user"></i> Alex</span>
-              <span><i class="fa-regular fa-calendar"></i> March 20, 2026</span>
+              <span><i class="fa-regular fa-user"></i> Meenakshi Mehta</span>
+              <span><i class="fa-regular fa-calendar"></i> April 3, 2025</span>
             </div>
           </div>
         </div>
 
         <div class="blog-card">
           <img
-            src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe"
+            src="https://cforcourage.wordpress.com/wp-content/uploads/2025/03/pexels-photo-3804409.jpeg?w=1400"
             alt=""
           />
           <div class="overlay"></div>
           <div class="blog-content">
             <span class="category">MyBook</span>
-            <h3>Lorem ipsum dolor sit amet consectetur</h3>
+            <a href="https://cforcourage.wordpress.com/2025/03/18/books-that-i-loved-reading-and-why-you-should-read-them-too/" target="_blank">
+              <h3>Books That I Loved Reading (And Why You Should Read Them Too)</h3> </a>
             <div class="meta">
-              <span><i class="fa-regular fa-user"></i> Marry</span>
-              <span><i class="fa-regular fa-calendar"></i> April 15, 2026</span>
+              <span><i class="fa-regular fa-user"></i> Meenakshi Mehta</span>
+              <span><i class="fa-regular fa-calendar"></i> March 18, 2025</span>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- Blog Section End -->
 
-    <!-- Work With Me -->
+    <!-- Work With Me Section Start -->
     <section class="contact-section" id="workwithme">
       <div class="contact-container">
         <!-- LEFT CONTENT -->
@@ -473,13 +513,14 @@
             />
             <textarea placeholder="Message" id="message" required></textarea>
 
-            <button type="submit">SUBMIT</button>
+            <button class="submit_btn" type="submit">SUBMIT</button>
           </form>
         </div>
       </div>
     </section>
+    <!-- Work With Me Section End -->
 
-    <!-- Footer Section -->
+    <!-- Footer Section Start -->
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-top">
@@ -494,7 +535,6 @@
 
           <div class="footer-buttons">
             <a href="#workwithme" class="btn dark">LET'S CONNECT</a>
-            <button class="btn light" id="copyEmail">COPY EMAIL</button>
           </div>
         </div>
 
@@ -503,11 +543,11 @@
         <div class="footer-middle">
           <div class="footer-links">
             <a href="/" class="nav-link active">Home</a>
-            <a href="#about" class="nav-link">About Me</a>
+            <a href="#about" class="nav-link">About</a>
             <a href="#whatido" class="nav-link">What I Do</a>
             <a href="#speaking" class="nav-link">Speaking</a>
             <a href="#writing" class="nav-link">Writing</a>
-            <a href="#impact" class="nav-link">Impact</a>
+            <a href="#impact" class="nav-link">In The News</a>
             <a href="#workwithme" class="nav-link">Work With Me</a>
           </div>
 
@@ -525,26 +565,35 @@
         </div>
       </div>
     </footer>
-
-    <button id="scrollTopBtn">
-      <i class="fa-solid fa-angle-up"></i>
-    </button>
+    <!-- Footer Section End -->
 
     <script src="script.js"></script>
     <script>
-      const blogCards = document.querySelectorAll(".blog-card");
+      // Services Section
+      const faqItems = document.querySelectorAll(".faq-item");
 
-      blogCards.forEach((card) => {
-        card.addEventListener("mouseenter", () => {
-          card.querySelector(".overlay").style.background = "rgba(0,0,0,0.3)";
-        });
+      faqItems.forEach((item) => {
+        const question = item.querySelector(".faq-question");
+        const icon = item.querySelector(".icon");
 
-        card.addEventListener("mouseleave", () => {
-          card.querySelector(".overlay").style.background = "rgba(0,0,0,0.45)";
+        question.addEventListener("click", () => {
+          faqItems.forEach((other) => {
+            if (other !== item) {
+              other.classList.remove("active");
+              other.querySelector(".icon").textContent = "+";
+            }
+          });
+
+          item.classList.toggle("active");
+
+          if (item.classList.contains("active")) {
+            icon.textContent = "-";
+          } else {
+            icon.textContent = "+";
+          }
         });
       });
     </script>
-
     <script>
       const sliderTrack = document.getElementById("sliderTrack");
       const slides = document.querySelectorAll(".testimonial-slide");
