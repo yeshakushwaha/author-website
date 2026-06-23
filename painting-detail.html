@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painting Details</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header Section Start -->
+    <header class="navbar">
+      <div class="logo">
+        <a href="index.html"
+          ><img src="img/logo.png" width="140" alt="Logo"
+        /></a>
+      </div>
+
+      <nav id="navMenu">
+        <a href="#about">About</a>
+        <a href="#services">What I Do</a>
+        <a href="#speaking">Speaking</a>
+        <a href="#writing">Writing</a>
+        <a href="#paintings">My Paintings</a>
+        <a href="#news">In The News</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="menu-btn" id="menuBtn">☰</div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Painting Details Section Start -->
+    <section class="painting-detail">
+      <div class="image">
+        <img id="paintingImage" />
+      </div>
+
+      <div class="content">
+        <h1 id="paintingTitle"></h1>
+        <h2 id="paintingPrice"></h2>
+
+        <p>
+          This handcrafted acrylic painting captures the serene beauty and
+          spiritual essence of Lord Krishna. Created on premium canvas using
+          vibrant colors and detailed brushwork.
+        </p>
+
+        <p>
+          Size: 24 x 36 Inches<br />
+          Medium: Acrylic on Canvas<br />
+          Framed: Yes<br />
+          Availability: In Stock
+        </p>
+
+        <a href="#" class="buy-btn" id="buyNowBtn">Buy Now</a>
+      </div>
+    </section>
+    <!-- Painting Details Section End -->
+
+    <!-- Footer Section Start -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-left">
+            <h2>C for Courage: A Journey of Resilience and Recovery</h2>
+            <p>
+              In this book "C for Courage", Meenakshi Mehta invites readers into
+              her deeply personal journey of battling cancer with unwavering
+              strength and grace.
+            </p>
+          </div>
+
+          <div class="footer-buttons">
+            <a href="#workwithme" class="btn dark">LET'S CONNECT</a>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="footer-middle">
+          <div class="footer-links">
+            <a href="/" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#whatido" class="nav-link">What I Do</a>
+            <a href="#speaking" class="nav-link">Speaking</a>
+            <a href="#writing" class="nav-link">Writing</a>
+            <a href="#impact" class="nav-link">In The News</a>
+            <a href="#paintings" class="nav-link">My Paintings</a>
+            <a href="#workwithme" class="nav-link">Work With Me</a>
+          </div>
+
+          <div class="footer-socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="footer-bottom">
+          <p>Copyright © 2026 | All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+
+    <script>
+      const painting = JSON.parse(localStorage.getItem("selectedPainting"));
+
+      document.getElementById("paintingImage").src = painting.image;
+      document.getElementById("paintingTitle").innerText = painting.title;
+      document.getElementById("paintingPrice").innerText = "₹" + painting.price;
+
+      document
+        .getElementById("buyNowBtn")
+        .addEventListener("click", function () {
+          localStorage.setItem("orderPainting", JSON.stringify(painting));
+          window.location.href = "payment.html";
+        });
+    </script>
+
+  </body>
+</html>

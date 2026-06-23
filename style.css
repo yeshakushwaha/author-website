@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +9,20 @@
 }
 
 body {
-  font-family: "Cormorant Garamond", serif;
   overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cormorant Garamond", serif;
+}
+
+p {
+  font-family: "Syne", sans-serif;
 }
 
 /* ================= Navbar CSS ================= */
@@ -34,9 +48,10 @@ nav a {
   position: relative;
   text-decoration: none;
   color: #111;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-weight: 700;
   padding-bottom: 8px;
+  font-family: "Syne", sans-serif;
 }
 
 nav a::after {
@@ -154,14 +169,18 @@ nav a.active::after {
   flex-wrap: wrap;
 }
 
+.book-btn {
+  margin-top: 1.5rem;
+}
+
 .btn1 {
   text-decoration: none;
   padding: 13px 45px;
   border-radius: 50px;
   font-weight: 700;
   transition: 0.3s;
-  font-size: 0.9rem;
   text-transform: uppercase;
+  font-family: "Syne", sans-serif;
 }
 
 .primary {
@@ -193,7 +212,7 @@ nav a.active::after {
   border-radius: 50px;
   overflow: hidden;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 700;
   z-index: 1;
   transition: 0.35s ease;
@@ -353,23 +372,22 @@ nav a.active::after {
 /* ================= Features Section CSS ================= */
 .featured-section {
   width: 100%;
-  min-height: 260px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 40px 4%;
+  padding: 31px 4%;
   background: #ffffff;
   overflow: hidden;
 }
 
 .featured-content {
   flex: 1;
-  max-width: 301px;
+  max-width: 233px;
 }
 
 .featured-content h2 {
-  font-size: 2.6rem;
+  font-size: 2rem;
   color: #000000;
   margin-left: 40px;
   text-transform: capitalize;
@@ -436,7 +454,7 @@ nav a.active::after {
 /* ================= About Section CSS ================= */
 .about {
   position: relative;
-  padding: 100px 60px 30px 60px; /* balanced spacing */
+  padding: 80px 30px 80px 90px; /* balanced spacing */
   overflow: hidden;
 }
 
@@ -448,18 +466,17 @@ nav a.active::after {
   background-size: cover;
   background-position: center;
   z-index: 0;
-  top: 120px;
 }
 
 /* DARK OVERLAY */
 .about::after {
   content: "";
   position: absolute;
-  top: 120px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.80);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 1;
 }
 
@@ -469,18 +486,18 @@ nav a.active::after {
   z-index: 2;
   display: flex;
   align-items: center;
-  gap: 80px;
+  gap: 100px;
 }
 
 /* IMAGE */
-.about-image {
+/* .about-image {
   flex: 1;
   transform: translateY(-90px);
-}
+} */
 
 .about-image img {
   width: 100%;
-  max-width: 470px;
+  max-width: 440px;
   border-radius: 40px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -496,11 +513,13 @@ nav a.active::after {
 /* TAG */
 .tag {
   display: inline-block;
-  padding: 6px 14px;
+  padding: 8px 22px;
   border: 1px solid #fff;
   border-radius: 20px;
-  font-size: 1.5rem;
+  font-size: 0.9rem;
   margin-bottom: 18px;
+  text-transform: uppercase;
+  font-family: "Syne", sans-serif;
 }
 
 /* HEADING */
@@ -522,7 +541,8 @@ nav a.active::after {
   color: #ffffff;
   margin-bottom: 12px;
   line-height: 1.5;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 400;
   text-align: justify;
 }
 
@@ -628,7 +648,7 @@ nav a.active::after {
 }
 
 .left-content p {
-  font-size: clamp(14px, 2vw, 20px);
+  font-size: clamp(14px, 2vw, 17px);
   line-height: 1.5;
   color: #000000;
   max-width: 470px;
@@ -678,7 +698,7 @@ nav a.active::after {
 }
 
 .faq-answer p {
-  font-size: clamp(14px, 2vw, 20px);
+  font-size: clamp(14px, 2vw, 16px);
   line-height: 1.5;
   font-weight: 500;
   color: #000000;
@@ -740,11 +760,301 @@ nav a.active::after {
   }
 }
 
+/* ================= My Paintings Section CSS ================= */
+.stores-section {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  gap: 2rem;
+}
+
+.stores-section::before,
+.stores-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
+}
+
+.stores-section::before {
+  width: 350px;
+  height: 350px;
+  background: #ffb7d5;
+  top: -100px;
+  left: -120px;
+  opacity: 0.4;
+}
+
+.stores-section::after {
+  width: 300px;
+  height: 300px;
+  background: #d6c8ff;
+  right: -80px;
+  bottom: -80px;
+  opacity: 0.4;
+}
+
+.stores-left {
+  width: 420px;
+  flex-shrink: 0;
+  padding-left: 60px;
+  position: relative;
+  z-index: 5;
+}
+
+.title-wrap {
+  margin-bottom: 17px;
+}
+
+.title-wrap h2 {
+  font-size: 3.1rem;
+  line-height: 1;
+  font-weight: 900;
+  color: #111;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.stores-left p {
+  font-size: 16px;
+  color: #0f0f0f;
+  line-height: 1.7;
+  margin-bottom: 17px;
+}
+
+.painting-btn1 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  background: linear-gradient(135deg, #ff4d9f, #7c3aed);
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25);
+  transition: 0.35s ease;
+  font-family: "Syne", sans-serif;
+}
+
+.painting-btn1:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.35);
+}
+
+/* Navigation */
+
+.custom-nav {
+  display: flex;
+  gap: 14px;
+  margin-top: 40px;
+}
+
+.custom-nav button {
+  width: 58px;
+  height: 58px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  transition: 0.35s ease;
+}
+
+.custom-nav button:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, #ff4d9f, #7c3aed);
+  color: #fff;
+}
+
+/* Slider */
+
+.stores-slider {
+  width: calc(100% - 200px);
+  position: relative;
+  z-index: 5;
+}
+
+.storesSwiper {
+  overflow: visible;
+  padding: 20px 80px 20px 0;
+}
+
+/* Card */
+
+.store-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 45px;
+  transition: 0.4s ease;
+  width: 255px;
+  max-width: 100%;
+}
+
+/* Image */
+
+.store-card img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+
+  border-radius: 45px;
+
+  background: #fff;
+
+  transition:
+    transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 0.4s ease;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Overlay */
+
+.store-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0));
+  opacity: 0;
+  transition: 0.4s;
+  z-index: 1;
+  border-radius: 45px;
+}
+
+/* Floating Button */
+
+.store-card::after {
+  display: none;
+}
+
+.view-details-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 35px;
+
+  transform: translateX(-50%) translateY(20px);
+
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+
+  font-family: "Syne", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  border-radius: 50px;
+  padding: 10px 26px;
+
+  opacity: 0;
+  z-index: 3;
+
+  transition: 0.4s ease;
+}
+
+.store-card:hover .view-details-btn {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Hover Effects */
+
+.store-card:hover img {
+  transform: scale(1.12);
+}
+
+.store-card:hover {
+  transform: translateY(-12px);
+}
+
+.store-card:hover::before {
+  opacity: 1;
+}
+
+.store-card:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Active Center Slide */
+
+.swiper-slide-active .store-card img {
+  box-shadow: 0 25px 60px rgba(124, 58, 237, 0.25);
+}
+
+/* Smooth Swiper */
+
+.storesSwiper .swiper-wrapper {
+  transition-timing-function: ease-in-out !important;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px) {
+  .stores-section {
+    flex-direction: column;
+    padding: 70px 20px;
+  }
+
+  .stores-left {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .stores-slider {
+    width: 100%;
+  }
+
+  .title-wrap h2 {
+    font-size: 48px;
+  }
+
+  .custom-nav {
+    justify-content: center;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .title-wrap h2 {
+    font-size: 36px;
+  }
+
+  .store-card img {
+    height: 420px;
+    border-radius: 35px;
+  }
+
+  .custom-nav button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .btn1 {
+    padding: 12px 22px;
+  }
+}
+
 /* ===== TESTIMONIAL SECTION ===== */
 .testimonial-section {
   width: 100%;
   min-height: 100vh;
-  background: #ffffff;
+  background: #90909021;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -787,8 +1097,8 @@ nav a.active::after {
 
 /* TEXT */
 .testimonial-text {
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   line-height: 26px;
   text-align: justify;
   color: #000000;
@@ -841,6 +1151,7 @@ nav a.active::after {
   background: #442f7c;
   transform: translateY(-4px);
   border-color: #442f7c;
+  color: #fff;
 }
 
 /* RIGHT */
@@ -1182,6 +1493,7 @@ nav a.active::after {
   font-size: 13px;
   padding: 4px 8px;
   margin-bottom: 18px;
+  font-family: "Syne", sans-serif;
 }
 
 .blog-content h3 {
@@ -1197,6 +1509,8 @@ nav a.active::after {
   gap: 18px;
   font-size: 15px;
   color: #ddd;
+  font-weight: 300;
+  font-family: "Syne", sans-serif;
 }
 
 .meta i {
@@ -1205,12 +1519,14 @@ nav a.active::after {
 
 .tag2 {
   display: inline-block;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
   padding: 6px 14px;
   border: 1px solid #000;
   border-radius: 20px;
   margin-bottom: 10px;
+  font-family: "Syne", sans-serif;
 }
 
 /* =========================
@@ -1369,7 +1685,7 @@ nav a.active::after {
 }
 
 .contact-info p {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 15px;
   color: #000000;
@@ -1414,11 +1730,11 @@ textarea {
   background: rgb(68 47 124);
   color: #ffffff;
   border: none;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 500;
   cursor: pointer;
   transition: 0.3s;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Syne", sans-serif;
 }
 
 .submit_btn:hover {
@@ -1528,7 +1844,8 @@ textarea {
 
 .footer-left p {
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 .footer-buttons {
@@ -1538,14 +1855,15 @@ textarea {
 }
 
 .btn {
-  padding: 12px 20px;
+  padding: 12px 26px;
   border-radius: 25px;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 400;
   text-decoration: none;
   cursor: pointer;
   transition: 0.3s;
   border: none;
+  font-family: "Syne", sans-serif;
 }
 
 .btn.dark {
@@ -1556,7 +1874,6 @@ textarea {
 .btn.dark:hover {
   background: #654ea3;
 }
-
 
 /* Divider */
 hr {
@@ -1578,10 +1895,11 @@ hr {
   color: #fff;
   text-decoration: none;
   font-size: 14px;
+  font-family: "Syne", sans-serif;
 }
 
 .footer-links a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .footer-socials a {
@@ -1623,6 +1941,7 @@ hr {
 .footer-bottom {
   text-align: center;
   font-size: 13px;
+  font-weight: 300;
   color: #ffffff;
 }
 
@@ -1644,3 +1963,75 @@ hr {
   }
 }
 
+/* ================= Painting details Section CSS ================= */
+.painting-detail {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 80px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 8%;
+  background: #9090901f;
+}
+
+.painting-detail img {
+  max-width: 100%;
+  width: 100%;
+  border-radius: 20px;
+  height: 590px;
+}
+
+.content h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  font-family: "Syne", sans-serif;
+}
+
+.price {
+  font-size: 32px;
+  color: #9c27b0;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: "Syne", sans-serif;
+}
+
+.content p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 25px;
+  font-family: "Syne", sans-serif;
+}
+
+.buy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  background: linear-gradient(135deg, #ff4d9f, #7c3aed);
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25);
+  transition: 0.35s ease;
+  font-family: "Syne", sans-serif;
+}
+
+.buy-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.35);
+}
+
+@media (max-width: 768px) {
+  .painting-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .content h1 {
+    font-size: 30px;
+  }
+}

@@ -11,21 +11,31 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <!-- Header Section Start -->
     <header class="navbar">
       <div class="logo">
-        <a href="#"><img src="img/logo.png" width="140" alt="Logo" /></a>
+        <a href="index.html"
+          ><img src="img/logo.png" width="140" alt="Logo"
+        /></a>
       </div>
 
       <nav id="navMenu">
         <a href="#about">About</a>
-        <a href="#">What I Do</a>
-        <a href="#">Speaking</a>
-        <a href="#">Writing</a>
-        <a href="#">In The News</a>
-        <a href="#">Contact</a>
+        <a href="#services">What I Do</a>
+        <a href="#speaking">Speaking</a>
+        <a href="#writing">Writing</a>
+        <a href="#paintings">My Paintings</a>
+        <a href="#news">In The News</a>
+        <a href="#contact">Contact</a>
       </nav>
 
       <div class="menu-btn" id="menuBtn">☰</div>
@@ -136,8 +146,16 @@
         <h2>My professional design services</h2>
         <div class="red-line"></div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis tincidunt urna. Quisque elit nisi, viverra sed velit at, sollicitudin maximus tortor. Etiam a mi eget metus ultricies elementum. Fusce malesuada tortor sapien, non ornare purus porttitor at.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+          mattis tincidunt urna. Quisque elit nisi, viverra sed velit at,
+          sollicitudin maximus tortor. Etiam a mi eget metus ultricies
+          elementum. Fusce malesuada tortor sapien, non ornare purus porttitor
+          at.
         </p>
+
+        <div class="book-btn">
+          <a href="#" class="btn1 primary btn-fill">Book a Discovery call</a>
+        </div>
       </div>
 
       <!-- RIGHT FAQ -->
@@ -204,6 +222,250 @@
       </div>
     </section>
     <!-- Services Section End -->
+
+    <!-- My Paintings Section Start -->
+    <section class="stores-section" id="paintings">
+      <div class="stores-left">
+        <div class="title-wrap">
+          <h2>My Paintings</h2>
+        </div>
+
+        <p>
+          A collection of handcrafted artworks inspired by nature, emotions, and
+          imagination.
+        </p>
+
+        <div class="painting-btn">
+          <a href="paintings.html" class="painting-btn1 primary btn-fill"
+            >View All</a
+          >
+        </div>
+
+        <div class="custom-nav">
+          <button class="store-prev">&#8249;</button>
+
+          <button class="store-next">&#8250;</button>
+        </div>
+      </div>
+
+      <div class="stores-slider">
+        <div class="swiper storesSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="store-card">
+                <img src="img/all_paintings/painting-01.jpeg" />
+
+                <a
+                  href="painting-detail.html?id=1"
+                  class="view-details-btn"
+                  data-title="Painting 01"
+                  data-price="2000"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="store-card">
+                <img src="img/all_paintings/painting-02.jpeg" />
+                <a
+                  href="painting-detail.html?id=2"
+                  class="view-details-btn"
+                  data-title="Painting 02"
+                  data-price="2500"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="store-card">
+                <img src="img/all_paintings/painting-03.jpeg" />
+                <a
+                  href="painting-detail.html?id=3"
+                  class="view-details-btn"
+                  data-title="Painting 03"
+                  data-price="3000"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="store-card">
+                <img src="img/all_paintings/painting-04.jpeg" />
+                <a
+                  href="painting-detail.html?id=4"
+                  class="view-details-btn"
+                  data-title="Painting 04"
+                  data-price="3500"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="store-card">
+                <img src="img/all_paintings/painting-05.jpeg" />
+                <a
+                  href="painting-detail.html?id=5"
+                  class="view-details-btn"
+                  data-title="Painting 05"
+                  data-price="2000"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="store-card">
+                <img src="img/all_paintings/painting-06.jpeg" />
+                <a
+                  href="painting-detail.html?id=6"
+                  class="view-details-btn"
+                  data-title="Painting 06"
+                  data-price="2000"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="store-card">
+                <img src="img/all_paintings/painting-07.jpeg" />
+                <a
+                  href="painting-detail.html?id=7"
+                  class="view-details-btn"
+                  data-title="Painting 07"
+                  data-price="2500"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="store-card">
+                <img src="img/all_paintings/painting-08.jpeg" />
+                <a
+                  href="painting-detail.html?id=8"
+                  class="view-details-btn"
+                  data-title="Painting 08"
+                  data-price="3000"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="store-card">
+                <img src="img/all_paintings/painting-09.jpeg" />
+                <a
+                  href="painting-detail.html?id=9"
+                  class="view-details-btn"
+                  data-title="Painting 09"
+                  data-price="3500"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="store-card">
+                <img src="img/all_paintings/painting-10.jpeg" />
+                <a
+                  href="painting-detail.html?id=10"
+                  class="view-details-btn"
+                  data-title="Painting 10"
+                  data-price="2500"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="store-card">
+                <img src="img/all_paintings/painting-11.jpeg" />
+                <a
+                  href="painting-detail.html?id=11"
+                  class="view-details-btn"
+                  data-title="Painting 11"
+                  data-price="2500"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="store-card">
+                <img src="img/all_paintings/painting-12.jpeg" />
+                <a
+                  href="painting-detail.html?id=12"
+                  class="view-details-btn"
+                  data-title="Painting 12"
+                  data-price="3500"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="store-card">
+                <img src="img/all_paintings/painting-13.jpeg" />
+                <a
+                  href="painting-detail.html?id=13"
+                  class="view-details-btn"
+                  data-title="Painting 13"
+                  data-price="2000"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="store-card">
+                <img src="img/all_paintings/painting-14.jpeg" />
+                <a
+                  href="painting-detail.html?id=14"
+                  class="view-details-btn"
+                  data-title="Painting 14"
+                  data-price="2500"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="store-card">
+                <img src="img/all_paintings/painting-15.jpeg" />
+                <a
+                  href="painting-detail.html?id=15"
+                  class="view-details-btn"
+                  data-title="Painting 15"
+                  data-price="2000"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- My Paintings Section End -->
 
     <!-- Testimonial Section Start -->
     <section class="testimonial-section" id="impact">
@@ -438,8 +700,12 @@
           <div class="overlay"></div>
           <div class="blog-content">
             <span class="category">MyBook</span>
-            <a href="https://cforcourage.wordpress.com/2025/04/08/world-health-day-health-is-hope-and-hope-is-everything/" target="_blank">
-              <h3>World Health Day – Health is Hope, and Hope is Everything</h3> </a>
+            <a
+              href="https://cforcourage.wordpress.com/2025/04/08/world-health-day-health-is-hope-and-hope-is-everything/"
+              target="_blank"
+            >
+              <h3>World Health Day – Health is Hope, and Hope is Everything</h3>
+            </a>
             <div class="meta">
               <span><i class="fa-regular fa-user"></i> Meenakshi Mehta</span>
               <span><i class="fa-regular fa-calendar"></i> April 8, 2025</span>
@@ -455,8 +721,12 @@
           <div class="overlay"></div>
           <div class="blog-content">
             <span class="category">MyBook</span>
-            <a href="https://cforcourage.wordpress.com/2025/04/03/book-reading-a-heartfull-evening/" target="_blank">
-              <h3>Book Reading:  A Heartfull Evening  </h3> </a>
+            <a
+              href="https://cforcourage.wordpress.com/2025/04/03/book-reading-a-heartfull-evening/"
+              target="_blank"
+            >
+              <h3>Book Reading: A Heartfull Evening</h3>
+            </a>
             <div class="meta">
               <span><i class="fa-regular fa-user"></i> Meenakshi Mehta</span>
               <span><i class="fa-regular fa-calendar"></i> April 3, 2025</span>
@@ -472,8 +742,14 @@
           <div class="overlay"></div>
           <div class="blog-content">
             <span class="category">MyBook</span>
-            <a href="https://cforcourage.wordpress.com/2025/03/18/books-that-i-loved-reading-and-why-you-should-read-them-too/" target="_blank">
-              <h3>Books That I Loved Reading (And Why You Should Read Them Too)</h3> </a>
+            <a
+              href="https://cforcourage.wordpress.com/2025/03/18/books-that-i-loved-reading-and-why-you-should-read-them-too/"
+              target="_blank"
+            >
+              <h3>
+                Books That I Loved Reading (And Why You Should Read Them Too)
+              </h3>
+            </a>
             <div class="meta">
               <span><i class="fa-regular fa-user"></i> Meenakshi Mehta</span>
               <span><i class="fa-regular fa-calendar"></i> March 18, 2025</span>
@@ -684,6 +960,50 @@
       // INIT
       updateSlider();
       startAutoSlide();
+    </script>
+
+    <script>
+      const storesSwiper = new Swiper(".storesSwiper", {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+          nextEl: ".store-next",
+          prevEl: ".store-prev",
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1280: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+        },
+      });
+    </script>
+
+    <script>
+      document.querySelectorAll(".view-details-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const painting = {
+            image: this.parentElement.querySelector("img").src,
+            title: this.dataset.title,
+            price: this.dataset.price,
+          };
+
+          localStorage.setItem("selectedPainting", JSON.stringify(painting));
+        });
+      });
     </script>
   </body>
 </html>
