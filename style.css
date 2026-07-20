@@ -25,6 +25,10 @@ p {
   font-family: "Syne", sans-serif;
 }
 
+ul li{
+  font-family: "Syne", sans-serif;
+}
+
 /* ================= Navbar CSS ================= */
 
 .navbar {
@@ -150,17 +154,24 @@ nav a.active::after {
   justify-content: space-between;
 }
 
-.content {
+.small-content {
   flex: 1;
   padding-bottom: 180px;
 }
 
-.content h1 {
+.small-content h1 {
   max-width: 550px;
   font-size: 52px;
   color: #000000;
   margin-bottom: 40px;
   line-height: 1.1;
+}
+
+.small-content p {
+  font-size: 2rem;
+  font-weight: 900;
+  font-family: "Cormorant Garamond", serif;
+  text-transform: capitalize;
 }
 
 .head_buttons {
@@ -375,7 +386,7 @@ nav a.active::after {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 3rem;
   padding: 31px 4%;
   background: #ffffff;
   overflow: hidden;
@@ -454,7 +465,7 @@ nav a.active::after {
 /* ================= About Section CSS ================= */
 .about {
   position: relative;
-  padding: 80px 30px 80px 90px; /* balanced spacing */
+  padding: 80px 30px 80px 90px;
   overflow: hidden;
 }
 
@@ -476,7 +487,7 @@ nav a.active::after {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.88);
   z-index: 1;
 }
 
@@ -488,12 +499,6 @@ nav a.active::after {
   align-items: center;
   gap: 100px;
 }
-
-/* IMAGE */
-/* .about-image {
-  flex: 1;
-  transform: translateY(-90px);
-} */
 
 .about-image img {
   width: 100%;
@@ -540,10 +545,55 @@ nav a.active::after {
 .about-content p {
   color: #ffffff;
   margin-bottom: 12px;
-  line-height: 1.5;
-  font-size: 1.1rem;
-  font-weight: 400;
+  line-height: 1.4;
+  font-size: 1rem;
+  font-weight: 300;
   text-align: justify;
+}
+
+.about_buttons {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 1.7rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.about-fill {
+    background: #ffffff;
+    color: #000;
+    font-family: "Syne", serif;
+    transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-fill::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+    );
+    transition: left 0.7s ease;
+}
+
+.about-fill:hover::before {
+    left: 120%;
+}
+
+.about-fill:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 15px 35px rgba(66, 110, 124, 0.35);
+    background: #ffffff;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -617,11 +667,11 @@ nav a.active::after {
 
 /* ================= Service Section CSS ================= */
 .services-section {
-  background: #efefef;
+  background: linear-gradient(90deg, #A770EF 0%, #FDB99B 100%);
   padding: 100px 70px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 60px;
   flex-wrap: wrap;
 }
@@ -635,25 +685,35 @@ nav a.active::after {
   font-size: clamp(32px, 5vw, 53px);
   line-height: 1.1;
   font-weight: 900;
-  color: #111;
+  color: #000000;
   margin-bottom: 30px;
-  text-transform: uppercase;
+  text-transform: Capitalize;
 }
 
 .red-line {
   width: 140px;
   height: 4px;
-  background: #442f7c;
-  margin-bottom: 25px;
+  background: #000000;
+  margin-bottom: 15px;
 }
 
 .left-content p {
-  font-size: clamp(14px, 2vw, 17px);
+  font-size: clamp(14px, 2vw, 22px);
   line-height: 1.5;
   color: #000000;
   max-width: 470px;
-  text-align: justify;
-  font-weight: 600;
+  font-weight: 750;
+  text-transform: capitalize;
+}
+
+.services-list{
+  margin-top: 30px;
+  max-width: 460px;
+}
+
+.services-list li{
+  font-size: clamp(14px, 2vw, 15px);
+  line-height: 1.7;
 }
 
 /* RIGHT SIDE */
@@ -676,14 +736,15 @@ nav a.active::after {
 
 .faq-question h3 {
   font-size: clamp(16px, 3vw, 26px);
-  text-transform: uppercase;
-  font-weight: 800;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-family: "Syne", sans-serif;
 }
 
 .icon {
   font-size: clamp(28px, 5vw, 40px);
   font-weight: 600;
-  color: #442f7c;
+  color: #000000;
   flex-shrink: 0;
 }
 
@@ -760,6 +821,75 @@ nav a.active::after {
   }
 }
 
+/* ================= Feature Quote Section CSS ================= */
+.featured-quote{
+    background:linear-gradient(to bottom, #FDB99B,#CF8BF3);
+    padding: 120px 20px;
+    position:relative;
+    overflow:hidden;
+}
+
+.quote-card{
+    max-width:1000px;
+    margin:auto;
+    position:relative;
+    padding:70px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:30px;
+    box-shadow: 0 25px 60px rgba(0,0,0,.12);
+}
+
+.quote-card::before{
+    content:"❝";
+    position:absolute;
+    top:20px;
+    left:45px;
+    font-size:170px;
+    color:rgba(255,255,255,.12);
+    line-height:1;
+}
+
+.quote-card::after{
+    content:"✦";
+    position:absolute;
+    right:45px;
+    top:45px;
+    color:#fff;
+    font-size:28px;
+}
+
+.label{
+    text-transform:uppercase;
+    letter-spacing:6px;
+    color:#fff;
+    font-size:14px;
+    font-weight:600;
+}
+
+.quote-card h2{
+    font-size:58px;
+    font-family:Playfair Display,serif;
+    color:#111;
+    margin: 40px 0 25px;
+}
+
+.quote-card p{
+    max-width:700px;
+    color:#fff;
+    font-size:28px;
+    line-height:1.7;
+    font-style:italic;
+}
+
+.bottom-line{
+    width:120px;
+    height:2px;
+    background:#fff;
+    margin-top:35px;
+}
+
 /* ================= My Paintings Section CSS ================= */
 .stores-section {
   position: relative;
@@ -768,7 +898,7 @@ nav a.active::after {
   display: flex;
   align-items: center;
   background: #ffffff;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .stores-section::before,
@@ -806,13 +936,24 @@ nav a.active::after {
   z-index: 5;
 }
 
+.paintings-tag{
+  display: inline-block;
+  padding: 8px 22px;
+  border: 2px solid rgba(31, 117, 255);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  font-family: "Syne", sans-serif;
+}
+
 .title-wrap {
   margin-bottom: 17px;
 }
 
 .title-wrap h2 {
-  font-size: 3.1rem;
-  line-height: 1;
+  font-size: 3rem;
+  line-height: 3rem;
   font-weight: 900;
   color: #111;
   letter-spacing: -2px;
@@ -823,10 +964,16 @@ nav a.active::after {
   font-size: 16px;
   color: #0f0f0f;
   line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.main-bold{
+  font-size: 1.7rem;
+  font-weight: 600;
   margin-bottom: 17px;
 }
 
-.painting-btn1 {
+/* .painting-btn1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -834,21 +981,82 @@ nav a.active::after {
   border-radius: 50px;
   text-decoration: none;
   font-size: 1rem;
-  font-weight: 400;
-  color: #fff;
-  background: linear-gradient(135deg, #ff4d9f, #7c3aed);
+  font-weight: 600;
+  color: #000000;
+  background: linear-gradient(135deg, #998EE0, #E17DC2);
   box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25);
   transition: 0.35s ease;
   font-family: "Syne", sans-serif;
-}
+} */
 
-.painting-btn1:hover {
+/* .painting-btn1:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 40px rgba(124, 58, 237, 0.35);
+} */
+
+.painting-btn{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.painting-btn a{
+  font-size: 0.8rem;
+  font-weight: 600; 
+ text-decoration: none;
+ transition: 0.35s ease;
+  font-family: "Syne", sans-serif;
+  text-transform: uppercase;
+}
+
+/* From Uiverse.io by Allyhere */ 
+.btn-donate {
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: hsla(194 100% 69% / 1);
+  --btn-bg-2: hsla(217 100% 56% / 1);
+  --btn-bg-color: hsla(360 100% 100% / 1);
+  --radii: 0.5em;
+  cursor: pointer;
+  padding: 0.9em 1.4em;
+  min-width: 120px;
+  min-height: 44px;
+  font-size: var(--size, 1rem);
+  font-weight: 500;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(
+    325deg,
+    var(--btn-bg-2) 0%,
+    var(--btn-bg-1) 55%,
+    var(--btn-bg-2) 90%
+  );
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  box-shadow:
+    0px 0px 20px rgba(71, 184, 255, 0.5),
+    0px 5px 5px -1px rgba(58, 125, 233, 0.25),
+    inset 4px 4px 8px rgba(175, 230, 255, 0.5),
+    inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+}
+
+.btn-donate:hover {
+  background-position: right top;
+}
+
+.btn-donate:is(:focus, :focus-visible, :active) {
+  outline: none;
+  box-shadow:
+    0 0 0 3px var(--btn-bg-color),
+    0 0 0 6px var(--btn-bg-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-donate {
+    transition: linear;
+  }
 }
 
 /* Navigation */
-
 .custom-nav {
   display: flex;
   gap: 14px;
@@ -862,23 +1070,20 @@ nav a.active::after {
   border-radius: 50%;
   cursor: pointer;
   font-size: 24px;
-
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(15px);
-
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
   transition: 0.35s ease;
+  margin-top: 20px;
 }
 
 .custom-nav button:hover {
-  transform: translateY(-4px);
-  background: linear-gradient(135deg, #ff4d9f, #7c3aed);
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #1f75ff, #49b4fb);
   color: #fff;
 }
 
 /* Slider */
-
 .stores-slider {
   width: calc(100% - 200px);
   position: relative;
@@ -891,36 +1096,29 @@ nav a.active::after {
 }
 
 /* Card */
-
 .store-card {
   position: relative;
   overflow: hidden;
   border-radius: 45px;
   transition: 0.4s ease;
-  width: 255px;
+  width: 300px;
   max-width: 100%;
 }
 
 /* Image */
-
 .store-card img {
   width: 100%;
-  height: 520px;
+  height: 380px;
   object-fit: cover;
-
   border-radius: 45px;
-
   background: #fff;
-
   transition:
     transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
     filter 0.4s ease;
-
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
 /* Overlay */
-
 .store-card::before {
   content: "";
   position: absolute;
@@ -933,7 +1131,6 @@ nav a.active::after {
 }
 
 /* Floating Button */
-
 .store-card::after {
   display: none;
 }
@@ -942,22 +1139,17 @@ nav a.active::after {
   position: absolute;
   left: 50%;
   bottom: 35px;
-
   transform: translateX(-50%) translateY(20px);
-
-  background: #fff;
-  color: #000;
+  background: linear-gradient(45deg, rgb(171 116 235), rgb(250 183 158));
+  color: #000000;
   text-decoration: none;
-
   font-family: "Syne", sans-serif;
   font-size: 0.8rem;
-  font-weight: 400;
+  font-weight: 500;
   border-radius: 50px;
   padding: 10px 26px;
-
   opacity: 0;
   z-index: 3;
-
   transition: 0.4s ease;
 }
 
@@ -967,7 +1159,6 @@ nav a.active::after {
 }
 
 /* Hover Effects */
-
 .store-card:hover img {
   transform: scale(1.12);
 }
@@ -986,13 +1177,11 @@ nav a.active::after {
 }
 
 /* Active Center Slide */
-
 .swiper-slide-active .store-card img {
   box-shadow: 0 25px 60px rgba(124, 58, 237, 0.25);
 }
 
 /* Smooth Swiper */
-
 .storesSwiper .swiper-wrapper {
   transition-timing-function: ease-in-out !important;
 }
@@ -1051,10 +1240,238 @@ nav a.active::after {
 }
 
 /* ===== TESTIMONIAL SECTION ===== */
+.book-banner{
+    width:100%;
+    min-height:650px;
+    background:url("img/testimonial_bg.png") 100% 100%/cover no-repeat;
+    display:flex;
+    align-items:center;
+    padding:80px 8%;
+}
+
+.book-content{
+    width:45%;
+    max-width:560px;
+}
+
+.book-content h2{
+    font-size:4rem;
+    font-weight:700;
+    color:#101010;
+    margin-bottom:10px;
+    line-height:1.1;
+}
+
+.book-content h4{
+    color:#383838;
+    font-size:24px;
+    font-weight:500;
+    line-height:1.6;
+    margin-bottom:15px;
+}
+
+.book-content h4 span{
+    font-size:18px;
+    color:#636262;
+}
+
+.book-content p{
+    color:#4e4e4e;
+    font-size:1.1rem;
+    line-height:1.7;
+    margin-bottom:35px;
+    text-align:justify;
+}
+
+.price{
+    font-size:34px;
+    margin-bottom:35px;
+    color:#222;
+    font-weight:500;
+}
+
+.price span{
+    color:#d84235;
+    font-weight:700;
+}
+
+.book-buttons a{
+  text-decoration:none;
+  text-transform:uppercase;
+}
+
+/* From Uiverse.io by Allyhere */ 
+.book-btn-donate {
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: rgb(144, 49, 163);
+  --btn-bg-2: rgb(185, 84, 185);
+  --btn-bg-color: hsla(360 100% 100% / 1);
+  --radii: 0.5em;
+  cursor: pointer;
+  padding: 0.9em 1.4em;
+  min-width: 120px;
+  min-height: 44px;
+  font-size: var(--size, 1rem);
+  font-weight: 500;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(
+    325deg,
+    var(--btn-bg-2) 0%,
+    var(--btn-bg-1) 55%,
+    var(--btn-bg-2) 90%
+  );
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  box-shadow:
+    0px 0px 20px rgba(71, 184, 255, 0.5),
+    0px 5px 5px -1px rgba(58, 125, 233, 0.25),
+    inset 4px 4px 8px rgba(175, 230, 255, 0.5),
+    inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+}
+
+.book-btn-donate:hover {
+  background-position: right top;
+}
+
+.book-btn-donate:is(:focus, :focus-visible, :active) {
+  outline: none;
+  box-shadow:
+    0 0 0 3px var(--btn-bg-color),
+    0 0 0 6px var(--btn-bg-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book-btn-donate {
+    transition: linear;
+  }
+}
+
+
+/* ========================= */
+/* Responsive */
+/* ========================= */
+
+@media(max-width:991px){
+
+.book-banner{
+
+    min-height:auto;
+
+    padding:60px 40px;
+}
+
+.book-content{
+
+    width:65%;
+}
+
+.book-content h1{
+
+    font-size:48px;
+}
+
+}
+
+@media(max-width:768px){
+
+.book-banner{
+
+    background-position:right center;
+
+    padding:60px 25px;
+}
+
+.book-content{
+
+    width:100%;
+
+    max-width:100%;
+
+    background:rgba(255,255,255,.78);
+
+    backdrop-filter:blur(4px);
+
+    padding:25px;
+
+    border-radius:15px;
+}
+
+.book-content h1{
+
+    font-size:38px;
+}
+
+.book-content h4{
+
+    font-size:20px;
+}
+
+.book-content p{
+
+    font-size:16px;
+}
+
+.price{
+
+    font-size:28px;
+}
+
+}
+
+@media(max-width:480px){
+
+.book-banner{
+
+    padding:40px 20px;
+}
+
+.book-content h1{
+
+    font-size:32px;
+}
+
+.book-content h4{
+
+    font-size:18px;
+}
+
+.book-content p{
+
+    font-size:15px;
+}
+
+.btn{
+
+    width:100%;
+
+    text-align:center;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .testimonial-section {
   width: 100%;
   min-height: 100vh;
-  background: #90909021;
+  background: url("img/testimonial_bg.png") no-repeat center bottom/ cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1179,7 +1596,7 @@ nav a.active::after {
 /* BOOK */
 .book-image {
   width: 100%;
-  max-width: 420px;
+  max-width: 530px;
 
   position: relative;
   z-index: 2;
@@ -1338,8 +1755,15 @@ nav a.active::after {
 .listening-section h2 {
   font-size: 3.1rem;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   text-transform: uppercase;
+}
+
+.listening-section p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 60px;
+  text-transform: capitalize;
 }
 
 .video-grid {
@@ -2035,3 +2459,5 @@ hr {
     font-size: 30px;
   }
 }
+
+
