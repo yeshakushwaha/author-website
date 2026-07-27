@@ -1,0 +1,679 @@
+/*=========================
+Google Font
+=========================*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+   font-family: "Raleway", sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 92%;
+  max-width: 1280px;
+  margin: auto;
+}
+
+/*=========================
+Header
+=========================*/
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 999;
+  border-bottom: 1px solid #ececec;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 82px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.menu li a {
+  color: #222;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.3s;
+  font-family: "Syne", serif;
+}
+
+.menu li a:hover {
+  color: #654ea3;
+}
+
+.menu li a.active {
+  color: #654ea3;
+}
+
+.menu-btn {
+  display: none;
+
+  font-size: 24px;
+
+  cursor: pointer;
+}
+
+/*=========================
+Page Title
+=========================*/
+
+.page-title {
+  padding: 60px 0 45px;
+
+  text-align: center;
+}
+
+.page-title h1 {
+  font-size: 3rem;
+
+  font-weight: 700;
+  text-transform: capitalize;
+  font-family: "Cormorant Garamond", serif;
+  line-height: 1.1;
+}
+
+.page-title h1 span {
+  color: #654ea3;
+}
+
+/*=========================
+Portfolio
+=========================*/
+
+.portfolio {
+  padding-bottom: 80px;
+}
+
+.portfolio-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 40px 28px;
+}
+
+/*=========================
+Card
+=========================*/
+
+.work-card {
+  transition: 0.35s;
+}
+
+.image {
+  overflow: hidden;
+  border: 1px solid #ededed;
+}
+
+.image img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  transition: 0.45s;
+}
+
+.work-card:hover img {
+  transform: scale(1.08);
+}
+
+.work-card h3 {
+  margin-top: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+}
+
+.work-card p {
+  margin-top: 6px;
+
+  color: #666;
+
+  font-size: 12px;
+
+  line-height: 22px;
+
+  font-style: italic;
+}
+
+/*=========================
+Responsive
+=========================*/
+
+@media (max-width: 1100px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .menu {
+    gap: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .page-title {
+    padding: 45px 0;
+  }
+
+  .page-title h1 {
+    font-size: 42px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo img {
+    width: 145px;
+  }
+
+  .page-title h1 {
+    font-size: 34px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+}
+
+/*=========================
+Portfolio Card Styling
+=========================*/
+
+.work-card {
+  position: relative;
+  transition: all 0.35s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-6px);
+}
+
+.image {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e9e9e9;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.35s;
+}
+
+.work-card:hover .image {
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+.image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.work-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Title */
+
+.work-card h3 {
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+  line-height: 22px;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+}
+
+.work-card:hover h3 {
+  color: #654ea3;
+}
+
+.gradientText{
+  background: -webkit-linear-gradient(#9D50BB, #6E48AA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Category */
+
+.work-card p {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #777;
+  font-style: italic;
+}
+
+/*=========================
+Better Responsive
+=========================*/
+
+@media (max-width: 1200px) {
+  .image img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .image img {
+    height: 210px;
+  }
+
+  .work-card h3 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .image img {
+    height: 260px;
+  }
+}
+
+/*=========================
+Mobile Menu
+=========================*/
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.35s;
+  z-index: 998;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    position: fixed;
+
+    top: 0;
+    right: -100%;
+
+    width: 280px;
+    height: 100vh;
+
+    background: #fff;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0;
+
+    padding: 90px 30px;
+
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.12);
+
+    transition: 0.4s;
+
+    z-index: 999;
+  }
+
+  .menu.active {
+    right: 0;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu li a {
+    display: block;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #eee;
+
+    font-size: 15px;
+
+    width: 100%;
+  }
+
+  .menu-btn {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+}
+
+/*=================================
+STEP 5 : Premium Portfolio Cards
+=================================*/
+
+.portfolio {
+  padding: 20px 0 100px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 55px 32px;
+}
+
+/* Card */
+
+.work-card {
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+/* Image */
+
+.image {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid #ececec;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.image img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+  height: 480px;
+}
+
+/* Overlay */
+
+.image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.05));
+  opacity: 0;
+  transition: 0.4s;
+  z-index: 1;
+}
+
+.work-card:hover .image::before {
+  opacity: 1;
+}
+
+.work-card:hover .image::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.work-card:hover img {
+  transform: scale(1.12);
+}
+
+.work-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Content */
+
+.work-content {
+  padding: 18px 2px 0;
+}
+
+.work-content h3 {
+  font-size: 17px;
+  color: #1d1d1d;
+
+  font-weight: 700;
+
+  line-height: 28px;
+
+  transition: 0.3s;
+}
+
+.work-content p {
+  margin-top: 10px;
+
+  color: #777;
+
+  font-size: 13px;
+
+  line-height: 24px;
+
+  font-style: italic;
+}
+
+.work-card:hover h3 {
+  color: #654ea3;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .image img {
+    aspect-ratio: 1/1;
+  }
+}
+
+/*=====================================
+STEP 6 : Premium Header (WebeeSocial Style)
+======================================*/
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  transition: 0.35s ease;
+  border-bottom: 1px solid #efefef;
+}
+
+.header.scrolled {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.nav {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: 150px;
+  transition: 0.3s;
+}
+
+/*==================
+Navigation
+==================*/
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  position: relative;
+
+  display: inline-block;
+
+  color: #222;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  padding: 30px 0;
+
+  transition: 0.35s;
+}
+
+/* Hover */
+
+.menu li a:hover {
+  color: #654ea3;
+  font-weight: 700;
+}
+
+/* Active */
+
+.menu li a.active {
+  color: #654ea3;
+  font-weight: 700;
+}
+
+/* Underline Animation */
+
+.menu li a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 20px;
+
+  width: 0;
+  height: 2px;
+
+  background: #654ea3;
+
+  transition: 0.35s ease;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+}
+
+.menu li a.active::after {
+  width: 100%;
+}
+
+/*==================
+Hamburger
+==================*/
+
+.menu-btn {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.menu-btn:hover {
+  background: #f5f5f5;
+}
+
+.menu-btn i {
+  font-size: 22px;
+}
+
+/*==================
+Responsive
+==================*/
+
+@media (max-width: 768px) {
+  .nav {
+    height: 78px;
+  }
+
+  .logo img {
+    width: 160px;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .menu {
+    padding-top: 90px;
+  }
+
+  .menu li a {
+    padding: 16px 0;
+  }
+}

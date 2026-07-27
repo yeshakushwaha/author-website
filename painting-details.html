@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meenakshi Meheta | My Paintings</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://res.cloudinary.com/dgrocldtz/image/upload/v1784533795/favicon_zptkkn.png"
+    />
+
+    <link rel="stylesheet" href="stylee.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header Section Start -->
+    <header class="header">
+      <div class="container nav">
+        <div class="logo">
+          <a href="index.html"
+            ><img
+              src="https://res.cloudinary.com/dgrocldtz/image/upload/v1784533790/logo_mvz7ui.png"
+              alt="Logo"
+          /></a>
+        </div>
+
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">My Journey</a></li>
+          <li><a href="#">What I Do</a></li>
+          <li><a>C for Courage</a></li>
+          <li><a class="active" href="paintings.html">My Paintings</a></li>
+          <li><a href="#">My Journal</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="menu-overlay"></div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- ================= PAGE TITLE ================= -->
+
+    <section class="page-title">
+      <div class="container">
+        <h1>My <span class="gradientText">Paintings</span></h1>
+      </div>
+    </section>
+
+    <!-- Painting Details Section Start -->
+    <section class="painting-details">
+      <div class="paint-image">
+        <img id="paintingImage" />
+      </div>
+
+      <div class="content">
+        <h2 id="paintingTitle"></h2>
+        <h3 id="paintingPrice"></h3>
+
+        <p id="paintingDescription"></p>
+
+        <p>
+          Size: 24 x 36 Inches<br />
+          Medium: Acrylic on Canvas<br />
+          Framed: Yes<br />
+          Availability: In Stock
+        </p>
+
+        <a href="#" class="buy-btn" id="buyNowBtn">Buy Now</a>
+      </div>
+    </section>
+    <!-- Painting Details Section End -->
+
+    <!-- Footer Section Start -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-left">
+            <h2>C for Courage: A Journey of Resilience and Recovery</h2>
+            <p>
+              In this book "C for Courage", Meenakshi Mehta invites readers into
+              her deeply personal journey of battling cancer with unwavering
+              strength and grace.
+            </p>
+          </div>
+
+          <div class="footer-buttons">
+            <a href="#contact" class="btn dark">LET'S CONNECT</a>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="footer-middle">
+          <div class="footer-links">
+            <a href="/" class="nav-link active">Home</a>
+            <a href="#">My Journey</a>
+            <a href="#">What I Do</a>
+            <a href="#">C for Courage</a>
+            <a href="#">My Paintings</a>
+            <a href="#">My Journal</a>
+            <a href="#">Contact</a>
+          </div>
+
+          <div class="footer-socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="footer-bottom">
+          <p>Copyright © 2026 | All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <script src="paintings.js"></script>
+
+    <script>
+  const id = localStorage.getItem("paintingID");
+
+  const painting = paintings[id];
+
+  if (painting) {
+    document.getElementById("paintingImage").src = painting.image;
+
+    document.getElementById("paintingTitle").innerText = painting.title;
+
+    document.getElementById("paintingPrice").innerText = painting.price;
+
+    document.getElementById("paintingDescription").innerText =
+      painting.description;
+
+    // Buy Now button
+    document.getElementById("buyNowBtn").href = "payment.html";
+  }
+    </script>
+  </body>
+</html>

@@ -1,64 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Payment</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<style>
-body{
-    font-family: Arial, sans-serif;
-    background:#f5f5f5;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-}
+    <title>Payment</title>
 
-.payment-box{
-    background:#fff;
-    padding:30px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,.1);
-}
+    <link rel="stylesheet" href="payment.css" />
+  </head>
 
-.payment-box img{
-    width:250px;
-    margin:20px 0;
-}
+  <body>
+    <div class="payment-container">
+      <div class="left">
+        <img id="paymentImage" />
 
-.price{
-    font-size:28px;
-    font-weight:bold;
-    color:#340653;
-}
-</style>
+        <h2 id="paymentTitle"></h2>
 
-</head>
-<body>
+        <h3 id="paymentPrice"></h3>
 
-<div class="payment-box">
+        <p class="note">Please pay the exact amount shown above.</p>
+      </div>
 
-    <h2 id="title"></h2>
+      <div class="right">
+        <h2>Scan & Pay</h2>
 
-    <div class="price" id="price"></div>
+        <img src="img/My_QR_Code.png" class="qr" />
 
-    <!-- Your UPI QR -->
-    <img src="img/My_QR_Code.png" alt="Payment QR">
+        <p class="upi">Google Pay QR</p>
 
-    <p>Scan QR Code and Complete Payment</p>
+        <form id="paymentForm">
+          <input type="text" placeholder="Full Name" required />
 
-</div>
+          <input type="tel" placeholder="Mobile Number" required />
 
-<script>
+          <input type="email" placeholder="Email Address" required />
 
-const painting = JSON.parse(localStorage.getItem("orderPainting"));
+          <input
+            type="text"
+            placeholder="Transaction ID / UTR Number"
+            required
+          />
 
-document.getElementById("title").innerText = painting.title;
-document.getElementById("price").innerText = "₹" + painting.price;
+          <label class="upload">
+            Upload Payment Screenshot
 
-</script>
+            <input type="file" accept="image/*" required />
+          </label>
 
-</body>
+          <button>Submit Order</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="paintings.js"></script>
+
+    <script src="payment.js"></script>
+
+  </body>
 </html>

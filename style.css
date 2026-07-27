@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   margin: 0;
@@ -22,7 +26,7 @@ h6 {
 }
 
 p {
-  font-family: "Syne", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 ul li{
@@ -148,10 +152,16 @@ nav a.active::after {
   max-width: 1400px;
   margin: auto;
   min-height: 100vh;
-  padding: 120px 6% 0;
+  padding: 220px 8% 0;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+}
+
+.gradientText{
+  background: -webkit-linear-gradient(#a044ff, #2F0743);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .small-content {
@@ -167,11 +177,13 @@ nav a.active::after {
   line-height: 1.1;
 }
 
-.small-content p {
-  font-size: 2rem;
-  font-weight: 900;
-  font-family: "Cormorant Garamond", serif;
+.small-content h2 {
+  font-size: 2.6rem;
+  line-height: 3rem;
+  font-weight: 400;
   text-transform: capitalize;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 17px;
 }
 
 .head_buttons {
@@ -463,211 +475,190 @@ nav a.active::after {
 }
 
 /* ================= About Section CSS ================= */
-.about {
-  position: relative;
-  padding: 80px 30px 80px 90px;
-  overflow: hidden;
+.about-author{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+
+    min-height:100vh;
 }
 
-/* BACKGROUND IMAGE */
-.about-bg {
-  position: absolute;
-  inset: 0;
-  background: url("img/about_bg.png");
-  background-size: cover;
-  background-position: center;
-  z-index: 0;
+.author-image{
+
+    height:100%;
 }
 
-/* DARK OVERLAY */
-.about::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.88);
-  z-index: 1;
+.author-image img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
-/* MAIN LAYOUT */
-.about-wrapper {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  gap: 100px;
+.author-content{
+
+    padding:90px 95px;
 }
 
-.about-image img {
-  width: 100%;
-  max-width: 440px;
-  border-radius: 40px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.subtitle{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border: 1px solid #6827a2;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    font-family: "Syne", sans-serif;
 }
 
-/* CONTENT */
-.about-content {
-  flex: 1;
-  color: #fff;
-  max-width: 600px;
-  margin-top: 62px;
+.author-content h2{
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: 3.1rem;
+    line-height:1;
+    margin-bottom:15px;
+    color:#111;
 }
 
-/* TAG */
-.tag {
-  display: inline-block;
-  padding: 8px 22px;
-  border: 1px solid #fff;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  margin-bottom: 18px;
+.author-content p{
+    font-size: 1rem;
+    font-family: "Raleway", sans-serif;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 4;
+    text-align: justify;
+    color:#444;
+    margin-bottom:17px;
+}
+
+.author-button{
+  margin-top: 50px;
   text-transform: uppercase;
   font-family: "Syne", sans-serif;
+  font-weight: 500;
 }
 
-/* HEADING */
-.about-content h2 {
-  font-size: 3rem;
-  margin-bottom: 18px;
-  line-height: 1.3;
+/*-------------------*/
+/* Laptop */
+/*-------------------*/
+
+@media(max-width:1200px){
+
+.author-content{
+
+    padding:70px;
 }
 
-/* GRADIENT TEXT */
-.gradient-text {
-  background: linear-gradient(90deg, #ffffff, #ffffff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+.author-content h2{
+
+    font-size:60px;
 }
 
-/* TEXT */
-.about-content p {
-  color: #ffffff;
-  margin-bottom: 12px;
-  line-height: 1.4;
-  font-size: 1rem;
-  font-weight: 300;
-  text-align: justify;
+.author-content p{
+
+    font-size:19px;
 }
 
-.about_buttons {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-    margin-top: 1.7rem;
-    font-size: 0.8rem;
-    font-weight: 500;
+.author-list li{
+
+    font-size:20px;
 }
 
-.about-fill {
-    background: #ffffff;
-    color: #000;
-    font-family: "Syne", serif;
-    transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
 }
 
-.about-fill::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -120%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        120deg,
-        transparent,
-        rgba(255, 255, 255, 0.35),
-        transparent
-    );
-    transition: left 0.7s ease;
+/*-------------------*/
+/* Tablet */
+/*-------------------*/
+
+@media(max-width:991px){
+
+.about-author{
+
+    grid-template-columns:1fr;
 }
 
-.about-fill:hover::before {
-    left: 120%;
+.author-image{
+
+    height:650px;
 }
 
-.about-fill:hover {
-    transform: translateY(-4px) scale(1.01);
-    box-shadow: 0 15px 35px rgba(66, 110, 124, 0.35);
-    background: #ffffff;
+.author-content{
+
+    padding:60px 40px;
 }
 
-/* ================= RESPONSIVE ================= */
+.author-content h2{
 
-/* Large Tablets (1024px) */
-@media (max-width: 1024px) {
-  .about-wrapper {
-    gap: 40px;
-  }
-
-  .about-content h2 {
-    font-size: 34px;
-  }
+    font-size:52px;
 }
 
-/* Tablets */
-@media (max-width: 992px) {
-  .about {
-    padding: 80px 40px;
-  }
+.author-content p{
 
-  .about-wrapper {
-    gap: 40px;
-  }
-
-  .about-content h2 {
-    font-size: 32px;
-  }
+    font-size:18px;
 }
 
+.author-list li{
+
+    font-size:18px;
+}
+
+}
+
+/*-------------------*/
 /* Mobile */
-@media (max-width: 768px) {
-  .about {
-    padding: 70px 20px;
-  }
+/*-------------------*/
 
-  .about-wrapper {
-    flex-direction: column;
-    text-align: center;
-  }
+@media(max-width:576px){
 
-  .about-image img {
-    max-width: 280px;
-    margin: 0 auto;
-    transform: translateY(60px);
-  }
+.author-image{
 
-  .about-content h2 {
-    font-size: 26px;
-  }
-
-  .about-content {
-    max-width: 100%;
-  }
+    height:420px;
 }
 
-/* Small Mobile */
-@media (max-width: 480px) {
-  .about {
-    padding: 60px 15px;
-  }
+.author-content{
 
-  .about-content h2 {
-    font-size: 22px;
-  }
-
-  .tag {
-    font-size: 12px;
-  }
+    padding:45px 22px;
 }
 
+.subtitle{
+
+    font-size:18px;
+}
+
+.author-content h2{
+
+    font-size:42px;
+}
+
+.author-content p{
+
+    font-size:16px;
+    line-height:1.8;
+}
+
+.author-list{
+
+    margin-top:30px;
+}
+
+.author-list li{
+
+    font-size:16px;
+    padding-left:22px;
+    margin-bottom:16px;
+}
+
+.bottom-line{
+
+    margin-top:45px;
+}
+
+}
 /* ================= Service Section CSS ================= */
 .services-section {
-  background: linear-gradient(90deg, #A770EF 0%, #FDB99B 100%);
+  background: linear-gradient(90deg, #E6AE8C 0%, #A8CECF 100%);
   padding: 100px 70px;
   display: flex;
   justify-content: space-between;
@@ -698,12 +689,14 @@ nav a.active::after {
 }
 
 .left-content p {
-  font-size: clamp(14px, 2vw, 22px);
-  line-height: 1.5;
+  font-size: clamp(14px, 2vw, 3.1rem);
+  line-height: 1.3;
+  letter-spacing: 1px;
   color: #000000;
   max-width: 470px;
-  font-weight: 750;
+  font-weight: 600;
   text-transform: capitalize;
+  font-family: "DM Serif Display", serif;
 }
 
 .services-list{
@@ -714,6 +707,7 @@ nav a.active::after {
 .services-list li{
   font-size: clamp(14px, 2vw, 15px);
   line-height: 1.7;
+  font-family: "Raleway", sans-serif;
 }
 
 /* RIGHT SIDE */
@@ -735,10 +729,10 @@ nav a.active::after {
 }
 
 .faq-question h3 {
-  font-size: clamp(16px, 3vw, 26px);
+  font-size: clamp(16px, 3vw, 28px);
   text-transform: capitalize;
-  font-weight: 700;
-  font-family: "Syne", sans-serif;
+  font-weight: 750;
+  font-family: "Raleway", sans-serif;
 }
 
 .icon {
@@ -822,72 +816,164 @@ nav a.active::after {
 }
 
 /* ================= Feature Quote Section CSS ================= */
-.featured-quote{
-    background:linear-gradient(to bottom, #FDB99B,#CF8BF3);
-    padding: 120px 20px;
-    position:relative;
-    overflow:hidden;
+.quote-section{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:80px 20px;
+    background:rgb(0 0 0 / 4%);
 }
 
-.quote-card{
+.quote-wrapper{
+    width:100%;
+    max-width:1100px;
+    text-align:center;
+}
+
+.quote-icon{
+    font-size:80px;
+    color:rgb(101 78 163);
+    line-height:1;
+    margin-bottom:20px;
+    font-family:serif;
+}
+
+.quote-text1{
+    font-family:'Cormorant Garamond', serif;
+    font-size:62px;
+    font-weight:800;
+    line-height:1.25;
+    color:#161616;
     max-width:1000px;
     margin:auto;
-    position:relative;
-    padding:70px;
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(20px);
-    border:1px solid rgba(255,255,255,.18);
-    border-radius:30px;
-    box-shadow: 0 25px 60px rgba(0,0,0,.12);
 }
 
-.quote-card::before{
-    content:"❝";
-    position:absolute;
-    top:20px;
-    left:45px;
-    font-size:170px;
-    color:rgba(255,255,255,.12);
-    line-height:1;
+.quote-text2{
+    font-family:'Cormorant Garamond', serif;
+    font-size:53px;
+    font-weight:400;
+    line-height:1.25;
+    color:#161616;
+    max-width:1000px;
+    margin:auto;
 }
 
-.quote-card::after{
-    content:"✦";
-    position:absolute;
-    right:45px;
-    top:45px;
-    color:#fff;
-    font-size:28px;
+.author{
+    margin-top:70px;
 }
 
-.label{
-    text-transform:uppercase;
-    letter-spacing:6px;
-    color:#fff;
-    font-size:14px;
+.signature{
+    width:170px;
+    display:block;
+    margin:0 auto 12px;
+}
+
+.author h4{
+    font-family:'Cormorant Garamond', serif;
+    font-size:34px;
     font-weight:600;
+    color:#202020;
 }
 
-.quote-card h2{
+/* ----------------------- */
+/* Large Laptop */
+/* ----------------------- */
+
+@media(max-width:1200px){
+
+.quote-text{
+    font-size:54px;
+}
+
+}
+
+/* ----------------------- */
+/* Laptop */
+/* ----------------------- */
+
+@media(max-width:992px){
+
+.quote-section{
+    padding:70px 25px;
+}
+
+.quote-text{
+    font-size:44px;
+}
+
+.signature{
+    width:150px;
+}
+
+.author h4{
+    font-size:30px;
+}
+
+}
+
+/* ----------------------- */
+/* Tablet */
+/* ----------------------- */
+
+@media(max-width:768px){
+
+.quote-icon{
     font-size:58px;
-    font-family:Playfair Display,serif;
-    color:#111;
-    margin: 40px 0 25px;
+    margin-bottom:25px;
 }
 
-.quote-card p{
-    max-width:700px;
-    color:#fff;
-    font-size:28px;
-    line-height:1.7;
-    font-style:italic;
+.quote-text{
+    font-size:34px;
+    line-height:1.35;
 }
 
-.bottom-line{
-    width:120px;
-    height:2px;
-    background:#fff;
-    margin-top:35px;
+.author{
+    margin-top:55px;
+}
+
+.signature{
+    width:135px;
+}
+
+.author h4{
+    font-size:26px;
+}
+
+}
+
+/* ----------------------- */
+/* Mobile */
+/* ----------------------- */
+
+@media(max-width:576px){
+
+.quote-section{
+    padding:60px 18px;
+}
+
+.quote-icon{
+    font-size:46px;
+}
+
+.quote-text{
+    font-size:26px;
+    line-height:1.45;
+}
+
+.author{
+    margin-top:45px;
+}
+
+.signature{
+    width:110px;
+}
+
+.author h4{
+    font-size:22px;
+}
+
 }
 
 /* ================= My Paintings Section CSS ================= */
@@ -939,9 +1025,10 @@ nav a.active::after {
 .paintings-tag{
   display: inline-block;
   padding: 8px 22px;
-  border: 2px solid rgba(31, 117, 255);
+  border: 1px solid #6827a2;
   border-radius: 20px;
   font-size: 0.9rem;
+  font-weight: 700;
   margin-bottom: 18px;
   text-transform: uppercase;
   font-family: "Syne", sans-serif;
@@ -972,27 +1059,6 @@ nav a.active::after {
   font-weight: 600;
   margin-bottom: 17px;
 }
-
-/* .painting-btn1 {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 40px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #000000;
-  background: linear-gradient(135deg, #998EE0, #E17DC2);
-  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25);
-  transition: 0.35s ease;
-  font-family: "Syne", sans-serif;
-} */
-
-/* .painting-btn1:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.35);
-} */
 
 .painting-btn{
   margin-top: 40px;
@@ -1084,106 +1150,87 @@ nav a.active::after {
 }
 
 /* Slider */
-.stores-slider {
-  width: calc(100% - 200px);
-  position: relative;
-  z-index: 5;
+.stores-slider{
+    overflow:hidden;
+    width:100%;
 }
 
-.storesSwiper {
-  overflow: visible;
-  padding: 20px 80px 20px 0;
+.marquee-track{
+    display:flex;
+    gap:30px;
+    width:max-content;
+    animation:scroll 30s linear infinite;
 }
 
-/* Card */
-.store-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 45px;
-  transition: 0.4s ease;
-  width: 300px;
-  max-width: 100%;
+.stores-slider:hover .marquee-track{
+    animation-play-state:paused;
 }
 
-/* Image */
-.store-card img {
-  width: 100%;
-  height: 380px;
-  object-fit: cover;
-  border-radius: 45px;
-  background: #fff;
-  transition:
-    transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
-    filter 0.4s ease;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+.store-card{
+    width:320px;
+    flex-shrink:0;
+    position:relative;
+    overflow:hidden;
 }
 
-/* Overlay */
-.store-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0));
-  opacity: 0;
-  transition: 0.4s;
-  z-index: 1;
-  border-radius: 45px;
+.store-card img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    transition:.5s;
 }
 
-/* Floating Button */
-.store-card::after {
-  display: none;
+.store-card:hover img{
+    transform:scale(1.08);
 }
 
-.view-details-btn {
-  position: absolute;
-  left: 50%;
-  bottom: 35px;
-  transform: translateX(-50%) translateY(20px);
-  background: linear-gradient(45deg, rgb(171 116 235), rgb(250 183 158));
-  color: #000000;
-  text-decoration: none;
-  font-family: "Syne", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 500;
-  border-radius: 50px;
-  padding: 10px 26px;
-  opacity: 0;
-  z-index: 3;
-  transition: 0.4s ease;
+.store-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    opacity:0;
+    transition:.4s;
 }
 
-.store-card:hover .view-details-btn {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
+.store-card:hover::before{
+    opacity:1;
 }
 
-/* Hover Effects */
-.store-card:hover img {
-  transform: scale(1.12);
+.view-details-btn{
+    position:absolute;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    left:50%;
+    bottom:25px;
+    transform:translate(-50%,20px);
+    opacity:0;
+    transition:.35s;
+    z-index:2;
+    background: linear-gradient(135deg, #9D50BB, #6E48AA);
+    padding:12px 26px;
+    border-radius:30px;
+    text-decoration:none;
+    color:#ffffff;
 }
 
-.store-card:hover {
-  transform: translateY(-12px);
+.store-card:hover .view-details-btn{
+    opacity:1;
+    transform:translate(-50%,0);
 }
 
-.store-card:hover::before {
-  opacity: 1;
-}
+@keyframes scroll{
 
-.store-card:hover::after {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
+    from{
+        transform:translateX(0);
+    }
 
-/* Active Center Slide */
-.swiper-slide-active .store-card img {
-  box-shadow: 0 25px 60px rgba(124, 58, 237, 0.25);
-}
+    to{
+        transform:translateX(-50%);
+    }
 
-/* Smooth Swiper */
-.storesSwiper .swiper-wrapper {
-  transition-timing-function: ease-in-out !important;
 }
 
 /* =========================
@@ -1303,8 +1350,8 @@ nav a.active::after {
 /* From Uiverse.io by Allyhere */ 
 .book-btn-donate {
   --clr-font-main: hsla(0 0% 20% / 100);
-  --btn-bg-1: rgb(144, 49, 163);
-  --btn-bg-2: rgb(185, 84, 185);
+  --btn-bg-1: rgb(101 78 163);
+  --btn-bg-2: rgb(101 78 163 / 79%);
   --btn-bg-color: hsla(360 100% 100% / 1);
   --radii: 0.5em;
   cursor: pointer;
@@ -1325,10 +1372,10 @@ nav a.active::after {
   border-radius: var(--radii);
   color: var(--btn-bg-color);
   box-shadow:
-    0px 0px 20px rgba(71, 184, 255, 0.5),
-    0px 5px 5px -1px rgba(58, 125, 233, 0.25),
-    inset 4px 4px 8px rgba(175, 230, 255, 0.5),
-    inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+    0px 0px 20px rgba(180, 180, 180, 0.5),
+    0px 5px 5px -1px rgba(167, 167, 167, 0.25),
+    inset 4px 4px 8px rgba(131, 131, 131, 0.5),
+    inset -4px -4px 8px rgba(78, 78, 78, 0.35);
 }
 
 .book-btn-donate:hover {
@@ -2388,26 +2435,35 @@ hr {
 }
 
 /* ================= Painting details Section CSS ================= */
-.painting-detail {
+.painting-details {
   max-width: 100%;
   margin: 0 auto;
-  padding: 80px 80px;
+  padding: 40px 80px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  align-items: center;
-  margin-top: 8%;
-  background: #9090901f;
+  align-items: flex-start;
+  margin-bottom: 8%;
+}
+
+.paint-image{
+  width: 100%;
+  height: 100%;
+}
+
+.paint-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .painting-detail img {
   max-width: 100%;
   width: 100%;
-  border-radius: 20px;
-  height: 590px;
+  height: 470px; 
 }
 
-.content h1 {
+.content h2 {
   font-size: 42px;
   margin-bottom: 15px;
   font-family: "Syne", sans-serif;
@@ -2439,7 +2495,7 @@ hr {
   font-size: 1rem;
   font-weight: 400;
   color: #fff;
-  background: linear-gradient(135deg, #ff4d9f, #7c3aed);
+  background: linear-gradient(135deg, #a044ff, #6a3093);
   box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25);
   transition: 0.35s ease;
   font-family: "Syne", sans-serif;
