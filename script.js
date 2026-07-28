@@ -1,10 +1,24 @@
 
 // Navbar Section
+
 const menuBtn = document.getElementById("menuBtn");
 const navMenu = document.getElementById("navMenu");
 
-menuBtn.addEventListener("click", () => {
+menuBtn.addEventListener("click",()=>{
+    menuBtn.classList.toggle("active");
     navMenu.classList.toggle("active");
+});
+
+// menu close after click
+document.querySelectorAll("#navMenu a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        menuBtn.classList.remove("active");
+        navMenu.classList.remove("active");
+
+    });
+
 });
 
 // Features Section
@@ -28,14 +42,6 @@ cards.forEach(card => {
 
     card.addEventListener("mouseleave", () => {
         card.style.transform = "translateY(0)";
-    });
-});
-
-// Smooth scroll or CTA action
-document.querySelector(".cta-btn").addEventListener("click", () => {
-    window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: "smooth"
     });
 });
 
@@ -75,6 +81,8 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     // Reset form
     this.reset();
 });
+
+
 
 
 

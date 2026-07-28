@@ -26,55 +26,66 @@
     <!-- Header Section Start -->
     <header class="navbar">
       <div class="logo">
-        <a href="index.html"
-          ><img
+        <a href="index.html">
+          <img
             src="https://res.cloudinary.com/dgrocldtz/image/upload/v1784533790/logo_mvz7ui.png"
             width="140"
             alt="Logo"
-        /></a>
+          />
+        </a>
       </div>
 
       <nav id="navMenu">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="#about">My Journey</a>
-        <a href="#services">What I Do </a>
+        <a href="#services">What I Do</a>
         <a href="#cforcourage">C for Courage</a>
         <a href="#paintings">My Paintings</a>
         <a href="#blog">My Journal</a>
         <a href="#contact">Contact</a>
       </nav>
 
-      <div class="menu-btn" id="menuBtn">☰</div>
+      <div class="menu-btn" id="menuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </header>
     <!-- Header Section End -->
 
     <!-- Hero Section Start -->
     <section class="hero">
+      <!-- Moving Background Text -->
       <div class="scroll-text">
         <div class="scroll-track">
-          <span
-            >Keynote Speaker . Storytelling Strategist . Experience Designer .
-            Marketing Consultant . Award Winner . Coffee Coach
+          <span>
+            Keynote Speaker . Storytelling Strategist . Experience Designer .
+            Marketing Consultant . Award Winner . Coffee Coach .
+          </span>
+
+          <span>
+            Keynote Speaker . Storytelling Strategist . Experience Designer .
+            Marketing Consultant . Award Winner . Coffee Coach .
           </span>
         </div>
       </div>
 
+      <!-- Hero Content -->
       <div class="hero-content">
+        <!-- Left Content -->
         <div class="small-content">
           <div class="head_buttons">
-            <a href="#contact" class="btn1 primary btn-fill"
-              >Invite Me to Speak
-            </a>
-            <a href="#contact" class="btn1 secondary btn-outline"
-              >Let’s connect</a
-            >
+            <a href="#contact" class="btn1 btn-fill"> Invite Me to Speak </a>
+
+            <a href="#contact" class="btn1 btn-outline"> Let's Connect </a>
           </div>
         </div>
 
+        <!-- Right Image -->
         <div class="hero-image">
           <img
             src="https://res.cloudinary.com/dgrocldtz/image/upload/v1784533838/author_dzk2y2.png"
-            alt="Person"
+            alt="Author"
           />
         </div>
       </div>
@@ -672,7 +683,7 @@
           </div>
 
           <!-- Video 4 -->
-          <div class="video-card new-row">
+          <div class="video-card">
             <iframe
               src="https://www.youtube.com/embed/ph7F80LHODc"
               title="Meenakshi Mehta"
@@ -693,7 +704,7 @@
           </div>
 
           <!-- Video 5 -->
-          <div class="video-card new-row">
+          <div class="video-card">
             <iframe
               src="https://www.youtube.com/embed/NHt5I8dw0eM"
               title="Tumorously Yours: S1 Ep 17:  Meenakshi"
@@ -722,7 +733,7 @@
       <!-- Top Content -->
       <div class="blog-header">
         <div class="blog-left">
-          <span class="tag2">Our Blogs</span>
+          <span class="tag2">My Blogs</span>
           <h2>From My<br />Journal</h2>
         </div>
 
@@ -751,6 +762,7 @@
 
             <a
               href="https://cforcourage.wordpress.com/2025/04/08/world-health-day-health-is-hope-and-hope-is-everything/"
+              target="_blank"
               >Read More</a
             >
           </div>
@@ -770,6 +782,7 @@
 
             <a
               href="https://cforcourage.wordpress.com/2025/04/03/book-reading-a-heartfull-evening/"
+              target="_blank"
               >Read More</a
             >
           </div>
@@ -789,6 +802,7 @@
 
             <a
               href="https://cforcourage.wordpress.com/2025/03/18/books-that-i-loved-reading-and-why-you-should-read-them-too/"
+              target="_blank"
               >Read More</a
             >
           </div>
@@ -811,8 +825,15 @@
           </p>
 
           <div class="contact-info">
-            <p>meenakshi.jointhedots@gmail.com</p>
-            <p>+91 98455 70014</p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              meenakshi.jointhedots@gmail.com
+            </p>
+
+            <p>
+              <i class="fa-solid fa-phone"></i>
+              +91 98455 70014
+            </p>
           </div>
         </div>
 
@@ -883,6 +904,11 @@
     </footer>
     <!-- Footer Section End -->
 
+    <!-- Move To Top Button -->
+    <button id="scrollTopBtn">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="script.js"></script>
 
     <script>
@@ -922,102 +948,30 @@
         });
       });
     </script>
-    <script>
-      const sliderTrack = document.getElementById("sliderTrack");
-      const slides = document.querySelectorAll(".testimonial-slide");
-
-      const nextBtn = document.getElementById("nextBtn");
-      const prevBtn = document.getElementById("prevBtn");
-
-      const dotsContainer = document.getElementById("dots");
-
-      let currentIndex = 0;
-      let autoSlide;
-
-      // CREATE DOTS
-      slides.forEach((_, index) => {
-        const dot = document.createElement("div");
-        dot.classList.add("dot");
-
-        if (index === 0) {
-          dot.classList.add("active");
-        }
-
-        dot.addEventListener("click", () => {
-          currentIndex = index;
-          updateSlider();
-          resetAutoSlide();
-        });
-
-        dotsContainer.appendChild(dot);
-      });
-
-      const dots = document.querySelectorAll(".dot");
-
-      // UPDATE SLIDER
-      function updateSlider() {
-        sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-        dots.forEach((dot) => dot.classList.remove("active"));
-
-        dots[currentIndex].classList.add("active");
-      }
-
-      // NEXT
-      function nextSlide() {
-        currentIndex++;
-
-        if (currentIndex >= slides.length) {
-          currentIndex = 0;
-        }
-
-        updateSlider();
-      }
-
-      // PREV
-      function prevSlide() {
-        currentIndex--;
-
-        if (currentIndex < 0) {
-          currentIndex = slides.length - 1;
-        }
-
-        updateSlider();
-      }
-
-      // BUTTONS
-      nextBtn.addEventListener("click", () => {
-        nextSlide();
-        resetAutoSlide();
-      });
-
-      prevBtn.addEventListener("click", () => {
-        prevSlide();
-        resetAutoSlide();
-      });
-
-      // AUTO SLIDE
-      function startAutoSlide() {
-        autoSlide = setInterval(() => {
-          nextSlide();
-        }, 5000);
-      }
-
-      // RESET
-      function resetAutoSlide() {
-        clearInterval(autoSlide);
-        startAutoSlide();
-      }
-
-      // INIT
-      updateSlider();
-      startAutoSlide();
-    </script>
 
     <script>
       document.querySelectorAll(".view-details-btn").forEach((button) => {
         button.addEventListener("click", function () {
           localStorage.setItem("paintingID", this.dataset.id);
+        });
+      });
+    </script>
+
+    <script>
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+          scrollTopBtn.classList.add("show");
+        } else {
+          scrollTopBtn.classList.remove("show");
+        }
+      });
+
+      scrollTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
         });
       });
     </script>
