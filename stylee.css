@@ -16,7 +16,7 @@ html {
 }
 
 body {
-   font-family: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif;
   color: #222;
   background: #fff;
 }
@@ -96,15 +96,13 @@ Page Title
 
 .page-title {
   padding: 60px 0 45px;
-
   text-align: center;
 }
 
 .page-title h1 {
   font-size: 3rem;
-
-  font-weight: 700;
-  text-transform: capitalize;
+  font-weight: 800;
+  text-transform: uppercase;
   font-family: "Cormorant Garamond", serif;
   line-height: 1.1;
 }
