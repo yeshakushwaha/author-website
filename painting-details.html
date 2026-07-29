@@ -66,12 +66,7 @@
 
         <p id="paintingDescription"></p>
 
-        <p>
-          Size: 24 x 36 Inches<br />
-          Medium: Acrylic on Canvas<br />
-          Framed: Yes<br />
-          Availability: In Stock
-        </p>
+        <p>Availability: In Stock</p>
 
         <a href="#" class="buy-btn" id="buyNowBtn">Buy Now</a>
       </div>
@@ -128,23 +123,23 @@
     <script src="paintings.js"></script>
 
     <script>
-  const id = localStorage.getItem("paintingID");
+      const id = localStorage.getItem("paintingID");
 
-  const painting = paintings[id];
+      const painting = paintings[id];
 
-  if (painting) {
-    document.getElementById("paintingImage").src = painting.image;
+      if (painting) {
+        document.getElementById("paintingImage").src = painting.image;
 
-    document.getElementById("paintingTitle").innerText = painting.title;
+        document.getElementById("paintingTitle").innerText = painting.title;
 
-    document.getElementById("paintingPrice").innerText = painting.price;
+        document.getElementById("paintingPrice").innerText = painting.price;
 
-    document.getElementById("paintingDescription").innerText =
-      painting.description;
+        document.getElementById("paintingDescription").innerText =
+          painting.description;
 
-    // Buy Now button
-    document.getElementById("buyNowBtn").href = "payment.html";
-  }
+        // Buy Now button
+        document.getElementById("buyNowBtn").href = "payment.html";
+      }
     </script>
   </body>
 </html>
