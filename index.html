@@ -59,11 +59,11 @@
       <div class="scroll-text">
         <div class="scroll-track">
           <span>
-            Keynote Speaker . Storyteller . Creative Mentor .
-            Marketing and Tech Enthusiast . Award Winner . Coffee Coach . Author .
-          </span><span>
-            Keynote Speaker . Storyteller . Creative Mentor .
-            Marketing and Tech Enthusiast . Award Winner . Coffee Coach . Author .
+            Keynote Speaker . Storyteller . Creative Mentor . Marketing and Tech
+            Enthusiast . Award Winner . Coffee Coach . Author . </span
+          ><span>
+            Keynote Speaker . Storyteller . Creative Mentor . Marketing and Tech
+            Enthusiast . Award Winner . Coffee Coach . Author .
           </span>
         </div>
       </div>
@@ -168,7 +168,8 @@
         <!-- <h2 class="quote-text1">Featured Quote</h2> -->
 
         <h3 class="quote-text2">
-          "The stories we tell ourselves <br>become the lives we choose to live."
+          "The stories we tell ourselves <br />become the lives we choose to
+          live."
         </h3>
 
         <div class="author">
@@ -186,7 +187,7 @@
     <section class="about-author" id="about">
       <div class="author-image">
         <img
-          src="https://res.cloudinary.com/dgrocldtz/image/upload/v1784537033/meenakshi_mehta_fiwxxy.png"
+          src="img/6.jpeg"
           alt="Meenakshi Meheta"
         />
       </div>
@@ -197,11 +198,7 @@
 
         <p>
           My journey has never followed a straight line - and I wouldn't have it
-          any other way.
-        </p>
-
-        <p>
-          I've been an educator, theatre facilitator, wellness practitioner,
+          any other way.I've been an educator, theatre facilitator, wellness practitioner,
           marketing leader, experience designer, celebrity manager, author,
           coffee coach and storyteller. Every chapter has taught me something
           invaluable about people, communication and resilience.
@@ -222,10 +219,10 @@
           of every story.
         </p>
 
-        <p>
+        <!-- <p>
           Everything I do today sits at the intersection of strategy,
           storytelling and human connection.
-        </p>
+        </p> -->
 
         <div class="author-button">
           <div class="book-buttons">
@@ -233,7 +230,7 @@
               href="https://wa.me/919845570014?text=Hi%20Meenakshi,%20I%20would%20like%20to%20connect%20with%20you."
               target="_blank"
               rel="noopener noreferrer"
-              class="book-btn-donate whatsapp-btn"
+              class="book-btn-donate whatsapp-btn1"
             >
               <i class="fa-brands fa-whatsapp"></i>
               <span>Let's Connect</span>
@@ -1290,15 +1287,24 @@
         <!-- RIGHT FORM -->
         <div class="right">
           <form id="contactForm">
-            <input type="text" placeholder="Your Name" id="name" required />
-            <input type="email" placeholder="Your Email" id="email" required />
+            <input type="text" id="name" placeholder="Full Name" required />
+
+            <input
+              type="email"
+              id="email"
+              placeholder="Email Address"
+              required
+            />
+
+            <input type="text" id="subject" placeholder="Subject" required />
+
             <textarea
-              placeholder="How can I help you?"
               id="message"
+              placeholder="Tell us about your enquiry..."
               required
             ></textarea>
 
-            <button class="submit_btn" type="submit">
+            <button id="sendBtn" class="submit_btn">
               Start the Conversation
             </button>
           </form>
@@ -1312,7 +1318,10 @@
       <div class="footer-container">
         <div class="footer-top">
           <div class="footer-left">
-            <h2>Thank you for stopping by. <br>May you leave with a story worth remembering.</h2>
+            <h2>
+              Thank you for stopping by. <br />May you leave with a story worth
+              remembering.
+            </h2>
           </div>
 
           <div class="footer-buttons">
@@ -1334,8 +1343,12 @@
           </div>
 
           <div class="footer-socials">
-            <a href="https://www.instagram.com/meenakshige/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/meenakshige/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/meenakshige/" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/meenakshige/" target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
             <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
           </div>
         </div>
@@ -1343,7 +1356,10 @@
         <hr />
 
         <div class="footer-bottom">
-          <p>Copyright © 2026 Meenakshi Mehta | All Rights Reserved. Crafted with stories, purpose, and heart.</p>
+          <p>
+            Copyright © 2026 Meenakshi Mehta | All Rights Reserved. Crafted with
+            stories, purpose, and heart.
+          </p>
         </div>
       </div>
     </footer>
@@ -1418,6 +1434,14 @@
           top: 0,
           behavior: "smooth",
         });
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+      emailjs.init({
+        publicKey: "YOUR_PUBLIC_KEY",
       });
     </script>
   </body>

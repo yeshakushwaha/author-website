@@ -1,6 +1,5 @@
 
 // Navbar Section
-
 const menuBtn = document.getElementById("menuBtn");
 const navMenu = document.getElementById("navMenu");
 
@@ -46,7 +45,6 @@ cards.forEach(card => {
 });
 
 // Footer
-
 document.getElementById("copyEmail").addEventListener("click", function () {
     const email = "your@email.com";
 
@@ -59,27 +57,55 @@ document.getElementById("copyEmail").addEventListener("click", function () {
 });
 
 //   Contact JS
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-    e.preventDefault();
+emailjs.init("YOUR_PUBLIC_KEY");
 
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let message = document.getElementById("message").value.trim();
+const form = document.getElementById("contactForm");
 
-    if (name === "" || email === "" || message === "") {
-        alert("Please fill all fields!");
-        return;
-    }
+form.addEventListener("submit", async function(e){
 
-    if (!email.includes("@")) {
-        alert("Enter a valid email!");
-        return;
-    }
+e.preventDefault();
 
-    alert("Message Sent Successfully 🚀");
+const btn=document.getElementById("sendBtn");
 
-    // Reset form
-    this.reset();
+btn.disabled=true;
+btn.innerHTML="Sending...";
+
+const params={
+
+name:document.getElementById("name").value,
+
+email:document.getElementById("email").value,
+
+subject:document.getElementById("subject").value,
+
+message:document.getElementById("message").value
+
+};
+
+try{
+
+await emailjs.send(
+"YOUR_SERVICE_ID",
+"YOUR_TEMPLATE_ID",
+params
+);
+
+alert("Thank you! Your enquiry has been sent successfully.");
+
+form.reset();
+
+}
+catch(error){
+
+alert("Something went wrong. Please try again.");
+
+console.log(error);
+
+}
+
+btn.disabled=false;
+btn.innerHTML="Start the Conversation";
+
 });
 
 
