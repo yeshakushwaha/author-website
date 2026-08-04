@@ -301,7 +301,6 @@ ul li {
   align-items: center;
   justify-content: center;
   padding: 14px 45px;
-  border-radius: 50px;
   text-decoration: none;
   font-size: 13px;
   font-weight: 700;
@@ -881,10 +880,9 @@ ul li {
 }
 
 /* ================= Service Section CSS ================= */
-/* ================= SERVICES SECTION ================= */
 
 .services-section {
-  background: linear-gradient(90deg, #e6ae8c 0%, #a8cecf 100%);
+  background: url(./img/parallax.jpg) no-repeat center top/cover;
   padding: 100px 7%;
   display: flex;
   justify-content: space-between;
@@ -903,7 +901,7 @@ ul li {
   font-size: clamp(20px, 3vw, 48px);
   line-height: 1.15;
   letter-spacing: 1px;
-  color: #000;
+  color: #ffffff;
   max-width: 520px;
   font-weight: 900;
   font-family: "Cormorant Garamond", serif;
@@ -919,7 +917,7 @@ ul li {
 .services-list li {
   font-size: clamp(14px, 1.3vw, 17px);
   line-height: 1.8;
-  color: #111;
+  color: #ffffff;
   margin-bottom: 10px;
   font-family: "Raleway", sans-serif;
 }
@@ -935,7 +933,7 @@ ul li {
 }
 
 .faq-item {
-  border-bottom: 2px solid #111;
+  border-bottom: 0.4px solid #fff;
   padding: 22px 0;
 }
 
@@ -951,7 +949,7 @@ ul li {
   font-size: clamp(18px, 2vw, 30px);
   line-height: 1.3;
   font-weight: 750;
-  color: #000;
+  color: #ffffff;
   margin: 0;
   font-family: "Raleway", sans-serif;
 }
@@ -959,7 +957,7 @@ ul li {
 .icon {
   font-size: clamp(25px, 3vw, 40px);
   font-weight: 600;
-  color: #000;
+  color: #ffffff;
   transition: 0.3s ease;
 }
 
@@ -984,7 +982,7 @@ ul li {
   line-height: 1.7;
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  color: #111;
+  color: #ffffff;
   margin: 0;
 }
 
