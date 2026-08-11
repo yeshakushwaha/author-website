@@ -5,6 +5,7 @@ const paintings = {
     description:
       "A magical fairy with wings made of butterfly patterns standing surrounded by vibrant flowers and floating butterflies.",
     image: "img/all_paintings/painting-01.png",
+    category: "others",
   },
 
   2: {
@@ -13,6 +14,7 @@ const paintings = {
     description:
       "A regal portrait of Lord Ganesha adorned with an intricate crown and jewelry, seated amidst a glowing backdrop of warm, ambient bokeh lights and festive golden tones that illuminate the divine figure.",
     image: "img/all_paintings/painting-02.png",
+    category: "god",
   },
 
   3: {
@@ -21,6 +23,7 @@ const paintings = {
     description:
       "A serene painting of Buddha sitting in a cross-legged meditation pose surrounded by warm, glowing sunlight and lotus blossoms.",
     image: "img/all_paintings/painting-03.png",
+    category: "buddha",
   },
 
   4: {
@@ -29,6 +32,7 @@ const paintings = {
     description:
       "A tall figure of Buddha standing gracefully amidst vibrant lotus flowers and lush greenery, holding a single lotus bud.",
     image: "img/all_paintings/painting-04.png",
+    category: "buddha",
   },
 
   5: {
@@ -37,6 +41,7 @@ const paintings = {
     description:
       "A magnificent close-up portrait of Buddha in deep meditation, set against an ornate, glowing golden mandala halo.",
     image: "img/all_paintings/painting-05.png",
+    category: "buddha",
   },
 
   6: {
@@ -45,6 +50,7 @@ const paintings = {
     description:
       "Lord Shiva seated in tranquil contemplation next to his sacred bull, Nandi, holding his trident (Trishul).",
     image: "img/all_paintings/painting-06.png",
+    category: "god",
   },
 
   7: {
@@ -53,6 +59,7 @@ const paintings = {
     description:
       "A detailed painting of a hummingbird hovering and sipping nectar near lush orange and white tropical flowers.",
     image: "img/all_paintings/painting-07.png",
+    category: "others",
   },
 
   8: {
@@ -61,6 +68,7 @@ const paintings = {
     description:
       "Lord Ganesha depicted in a regal, golden-toned paint style with a surrounding halo of light.",
     image: "img/all_paintings/painting-08.png",
+    category: "god",
   },
 
   9: {
@@ -69,6 +77,7 @@ const paintings = {
     description:
       "A protective male lion framed closely with his two young lion cubs.",
     image: "img/all_paintings/painting-09.png",
+    category: "others",
   },
 
   10: {
@@ -77,6 +86,7 @@ const paintings = {
     description:
       "A lush vase of soft pink and coral roses sitting on a windowsill.",
     image: "img/all_paintings/painting-10.png",
+    category: "flowers",
   },
 
   11: {
@@ -85,6 +95,7 @@ const paintings = {
     description:
       "An ornate portrait of an Indian deity or queen wearing an intricate jewel-encrusted crown with a glowing lotus nearby.",
     image: "img/all_paintings/painting-11.png",
+    category: "god",
   },
 
   12: {
@@ -93,6 +104,7 @@ const paintings = {
     description:
       "A deep, rich oil-style painting featuring yellow, red, and blue flowers set against a dark background.",
     image: "img/all_paintings/painting-12.png",
+    category: "flowers",
   },
 
   13: {
@@ -101,6 +113,7 @@ const paintings = {
     description:
       "A stylized close-up of an elephant decorated with vibrant mandala patterns, floral ears, and ornamental details.",
     image: "img/all_paintings/painting-13.png",
+    category: "others",
   },
 
   14: {
@@ -109,6 +122,7 @@ const paintings = {
     description:
       "Bright golden-yellow and orange roses in full bloom with leafy green accents.",
     image: "img/all_paintings/painting-14.png",
+    category: "flowers",
   },
 
   15: {
@@ -117,6 +131,7 @@ const paintings = {
     description:
       "A charming, multi-tiered traditional house under blooming pink cherry blossom trees with a patio seating area.",
     image: "img/all_paintings/painting-15.png",
+    category: "others",
   },
 
   16: {
@@ -125,6 +140,7 @@ const paintings = {
     description:
       "A vibrant hummingbird in flight next to large bright orange trumpet flowers.",
     image: "img/all_paintings/painting-16.png",
+    category: "others",
   },
 
   17: {
@@ -133,6 +149,7 @@ const paintings = {
     description:
       "A majestic bald eagle swooping low over a lush pine forest and mountain river valley.",
     image: "img/all_paintings/painting-17.png",
+    category: "others",
   },
 
   18: {
@@ -141,6 +158,7 @@ const paintings = {
     description:
       "A picturesque view of the Taj Mahal at sunset reflected over serene waters.",
     image: "img/all_paintings/painting-18.png",
+    category: "others",
   },
 
   19: {
@@ -149,6 +167,7 @@ const paintings = {
     description:
       "Two black cat silhouettes surrounded by vibrant, abstract, colorful flowers under a bright sun.",
     image: "img/all_paintings/painting-19.png",
+    category: "others",
   },
 
   20: {
@@ -157,6 +176,7 @@ const paintings = {
     description:
       "Modern abstract artwork featuring bold red circles crossed by dark linear grids and speckled textures.",
     image: "img/all_paintings/painting-20.png",
+    category: "others",
   },
 
   21: {
@@ -165,6 +185,7 @@ const paintings = {
     description:
       "An expressive abstract painting in intense red and earthy colors built around the form of a guitar.",
     image: "img/all_paintings/painting-21.png",
+    category: "others",
   },
 
   22: {
@@ -173,6 +194,7 @@ const paintings = {
     description:
       "An artistic, colorful impasto-style portrait of football star Lionel Messi.",
     image: "img/all_paintings/painting-22.png",
+    category: "others",
   },
 
   23: {
@@ -181,6 +203,7 @@ const paintings = {
     description:
       "A romantic couple strolling hand-in-hand down a path through blue-hued autumn trees.",
     image: "img/all_paintings/painting-23.png",
+    category: "others",
   },
 
   24: {
@@ -189,6 +212,7 @@ const paintings = {
     description:
       "A glowing golden harvest moon rising over a tranquil lake framed by dark trees.",
     image: "img/all_paintings/painting-24.png",
+    category: "others",
   },
 
   25: {
@@ -197,6 +221,7 @@ const paintings = {
     description:
       "A vibrant palette-knife style painting of a couple walking under an umbrella along a lamp-lit park path in fall.",
     image: "img/all_paintings/painting-25.png",
+    category: "others",
   },
 
   26: {
@@ -205,6 +230,7 @@ const paintings = {
     description:
       "A serene carved stone-style Buddha head surrounded by pink and white lotus blossoms.",
     image: "img/all_paintings/painting-26.png",
+    category: "buddha",
   },
 
   27: {
@@ -213,6 +239,7 @@ const paintings = {
     description:
       "A dramatic, close-up painting of large, ruffled pink and white peony blossoms on a dark canvas.",
     image: "img/all_paintings/painting-27.png",
+    category: "flowers",
   },
 
   28: {
@@ -221,6 +248,7 @@ const paintings = {
     description:
       "Three red and white Koi fish swimming around green lily pads in a clear pond.",
     image: "img/all_paintings/painting-28.png",
+    category: "others",
   },
 
   29: {
@@ -229,6 +257,7 @@ const paintings = {
     description:
       "A bright field of tall red and soft pink poppy flowers reaching up toward a sky.",
     image: "img/all_paintings/painting-29.png",
+    category: "flowers",
   },
 
   30: {
@@ -237,6 +266,7 @@ const paintings = {
     description:
       "A solitary figure holding an umbrella walking through a radiant, golden-leafed autumn forest.",
     image: "img/all_paintings/painting-30.png",
+    category: "others",
   },
 
   31: {
@@ -245,6 +275,7 @@ const paintings = {
     description:
       "An artistic rendering of Radha and Lord Krishna dancing together while Krishna plays the flute.",
     image: "img/all_paintings/painting-31.png",
+    category: "god",
   },
 
   32: {
@@ -253,6 +284,7 @@ const paintings = {
     description:
       "A cozy still-life scene showing an acoustic guitar resting next to a large vase of orange blossoms and books.",
     image: "img/all_paintings/painting-32.png",
+    category: "others",
   },
 
   33: {
@@ -261,6 +293,7 @@ const paintings = {
     description:
       "A rustic wooden cottage set on a hill above a winding path lined with bright red and yellow tulips.",
     image: "img/all_paintings/painting-33.png",
+    category: "others",
   },
 
   34: {
@@ -269,6 +302,7 @@ const paintings = {
     description:
       "A rich study of yellow and orange roses blossoming with soft gray abstract background tones.",
     image: "img/all_paintings/painting-34.png",
+    category: "flowers",
   },
 
   35: {
@@ -277,6 +311,7 @@ const paintings = {
     description:
       "A close-up face of Buddha depicted in cosmic shades of deep blue, glowing yellow, and fiery orange.",
     image: "img/all_paintings/painting-35.png",
+    category: "buddha",
   },
 
   36: {
@@ -285,6 +320,7 @@ const paintings = {
     description:
       "A golden-yellow forest path bathed in soft sunlight filtering through dense tree canopies.",
     image: "img/all_paintings/painting-36.png",
+    category: "others",
   },
 
   37: {
@@ -293,6 +329,7 @@ const paintings = {
     description:
       "A stylized, painted rendition of Leonardo da Vinci's iconic Mona Lisa.",
     image: "img/all_paintings/painting-37.png",
+    category: "others",
   },
 
   38: {
@@ -301,6 +338,7 @@ const paintings = {
     description:
       "A picturesque view of the ancient riverfront ghats of Varanasi at golden hour.",
     image: "img/all_paintings/painting-38.png",
+    category: "others",
   },
 
   39: {
@@ -309,6 +347,7 @@ const paintings = {
     description:
       "A cheerful, brightly lit arrangement of orange, pink, and yellow flowers on a cool blue backdrop.",
     image: "img/all_paintings/painting-39.png",
+    category: "flowers",
   },
 
   40: {
@@ -317,6 +356,7 @@ const paintings = {
     description:
       "A crested white cockatoo perched gracefully among vibrant orange and white floral branches.",
     image: "img/all_paintings/painting-40.png",
+    category: "others",
   },
 
   41: {
@@ -325,6 +365,7 @@ const paintings = {
     description:
       "A glass vase bursting with yellow sunflowers, white daisies, and orange accent flowers.",
     image: "img/all_paintings/painting-41.png",
+    category: "flowers",
   },
 
   42: {
@@ -333,6 +374,7 @@ const paintings = {
     description:
       "A dramatic, moody profile of Buddha rendered in dark indigo, electric blue, and golden accents.",
     image: "img/all_paintings/painting-42.png",
+    category: "buddha",
   },
 
   43: {
@@ -341,6 +383,7 @@ const paintings = {
     description:
       "Buddha standing in traditional robes, holding a black begging/alms bowl in a serene pose.",
     image: "img/all_paintings/painting-43.png",
+    category: "buddha",
   },
 
   44: {
@@ -349,6 +392,7 @@ const paintings = {
     description:
       "A traditional representation of Goddess Durga's face adorned with a silver crown and ornamental jewelry.",
     image: "img/all_paintings/painting-44.png",
+    category: "god",
   },
 
   45: {
@@ -357,6 +401,7 @@ const paintings = {
     description:
       "A picturesque Japanese garden with a red arched bridge spanning over a lily pond amidst pink cherry blossoms.",
     image: "img/all_paintings/painting-45.png",
+    category: "others",
   },
 
   46: {
@@ -365,6 +410,7 @@ const paintings = {
     description:
       "A vibrant impasto painting of a mother elephant and her calf rendered in bright rainbow palette splashes.",
     image: "img/all_paintings/painting-46.png",
+    category: "others",
   },
 
   47: {
@@ -373,6 +419,7 @@ const paintings = {
     description:
       "Bright yellow sunflowers standing in a clear vase placed beside an open window sill.",
     image: "img/all_paintings/painting-47.png",
+    category: "flowers",
   },
 
   48: {
@@ -381,6 +428,7 @@ const paintings = {
     description:
       "A dense, colorful cluster of purple, yellow, and white pansies overflowing from a wooden planter.",
     image: "img/all_paintings/painting-48.png",
+    category: "flowers",
   },
 
   49: {
@@ -389,6 +437,7 @@ const paintings = {
     description:
       "An antique-style still life depicting a rich bouquet of golden sunflowers in a decorated ceramic pitcher.",
     image: "img/all_paintings/painting-49.png",
+    category: "flowers",
   },
 
   50: {
@@ -397,6 +446,7 @@ const paintings = {
     description:
       "A charming rustic still life with wildflowers, a pitcher, tea container, and a bowl of fresh red cherries.",
     image: "img/all_paintings/painting-50.png",
+    category: "flowers",
   },
 
   51: {
@@ -405,6 +455,7 @@ const paintings = {
     description:
       "A full, country-style arrangement of white daisies and bright blue cornflowers in a dark earthen pot.",
     image: "img/all_paintings/painting-51.png",
+    category: "flowers",
   },
 
   52: {
@@ -413,6 +464,7 @@ const paintings = {
     description:
       "Tall crimson poppy flowers set against a warm glowing golden sunset sky with a floating butterfly.",
     image: "img/all_paintings/painting-52.png",
+    category: "flowers",
   },
 
   53: {
@@ -421,6 +473,7 @@ const paintings = {
     description:
       "A stylized stained-glass panel divided into four sections representing Spring, Summer, Autumn, and Winter trees.",
     image: "img/all_paintings/painting-53.png",
+    category: "others",
   },
 
   54: {
@@ -429,6 +482,7 @@ const paintings = {
     description:
       "A close-up portrait of Buddha's face with eyes gently closed, illuminated by soft golden-orange lighting.",
     image: "img/all_paintings/painting-54.png",
+    category: "buddha",
   },
 
   55: {
@@ -437,6 +491,7 @@ const paintings = {
     description:
       "A graceful back-profile portrait of a woman in a flowing, multi-toned ballgown with her hair styled in an elegant bun.",
     image: "img/all_paintings/painting-55.png",
+    category: "others",
   },
 
   56: {
@@ -445,6 +500,7 @@ const paintings = {
     description:
       "A vibrant artistic interpretation inspired by Vincent van Gogh's famous The Starry Night.",
     image: "img/all_paintings/painting-56.png",
+    category: "others",
   },
 
   57: {
@@ -453,5 +509,6 @@ const paintings = {
     description:
       "A tranquil portrait of a serene woman with her eyes gently closed in meditation or peaceful sleep.",
     image: "img/all_paintings/painting-57.png",
+    category: "others",
   },
 };
