@@ -144,10 +144,11 @@ ul li {
   width: 31px;
   height: 31px;
   transition: 0.3s ease;
+  transform: translateY(-2px)
 }
 
 #navMenu .social-link:hover img {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
 }
 
 @media (max-width: 768px) {
@@ -190,6 +191,8 @@ ul li {
   /* Show Hamburger */
   .menu-btn {
     display: flex;
+    background: transparent;
+    border: none;
   }
 
   /* Mobile Menu */
@@ -258,7 +261,25 @@ ul li {
   background: linear-gradient(90deg, #ffffff 0%, #eaafc8 50%, #654ea3 100%);
 }
 
-/* ================= MOVING TEXT ================= */
+/* ================= HERO BACKGROUND IMAGE ================= */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("./img/banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.40;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ================= MOVING BACKGROUND TEXT ================= */
+
 .scroll-text {
   position: absolute;
   top: 28%;
@@ -267,6 +288,7 @@ ul li {
   height: 126px;
   cursor: pointer;
   overflow: hidden;
+
   -webkit-mask-image: linear-gradient(
     to right,
     transparent,
@@ -282,6 +304,8 @@ ul li {
     black 88%,
     transparent
   );
+
+  z-index: 1;
 }
 
 .scroll-track {
@@ -302,7 +326,10 @@ ul li {
   padding-right: 100px;
   line-height: 1;
   font-family: "Instrument Serif", serif;
+  letter-spacing: 4px;
 }
+
+/* ================= MARQUEE ANIMATION ================= */
 
 @keyframes marquee {
   from {
@@ -315,21 +342,29 @@ ul li {
 }
 
 /* ================= HERO CONTENT ================= */
+
 .hero-content {
   max-width: 1400px;
   min-height: 80vh;
   margin: auto;
   padding: 90px 7% 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  position: relative;
+  z-index: 2;
 }
 
 /* ================= LEFT CONTENT ================= */
+
 .small-content {
   padding-top: 62px;
 }
+
 /* ================= BUTTONS ================= */
+
 .head_buttons {
   display: flex;
   gap: 20px;
@@ -341,18 +376,23 @@ ul li {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   padding: 14px 45px;
+
   text-decoration: none;
   font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
+
   overflow: hidden;
   transition: 0.35s;
   z-index: 1;
+
   font-family: "Karla", sans-serif;
 }
 
-/* WhatsApp Button */
+/* ================= WHATSAPP BUTTON ================= */
+
 .whatsapp-btn {
   display: inline-flex;
   align-items: center;
@@ -369,7 +409,7 @@ ul li {
 
 .whatsapp-btn i {
   font-size: 18px;
-  color: #4f0e5f;
+  color: #ffffff;
   transition: 0.35s ease;
 }
 
@@ -383,7 +423,8 @@ ul li {
   color: #fff;
 }
 
-/* Fill Button */
+/* ================= FILL BUTTON ================= */
+
 .btn-fill {
   background: linear-gradient(90deg, #a2279c, #4f0e5f);
   color: #fff;
@@ -391,12 +432,16 @@ ul li {
 
 .btn-fill::before {
   content: "";
+
   position: absolute;
   left: 0;
   bottom: -100%;
+
   width: 100%;
   height: 100%;
+
   background: linear-gradient(90deg, #6827a2, #e475a3);
+
   transition: 0.4s;
   z-index: -1;
 }
@@ -405,20 +450,25 @@ ul li {
   bottom: 0;
 }
 
-/* Outline Button */
+/* ================= OUTLINE BUTTON ================= */
+
 .btn-outline {
-  border: 2px solid #442f7c;
-  color: #4f0e5f;
+  border: 2px solid #ffffff;
+  color: #ffffff;
 }
 
 .btn-outline::before {
   content: "";
+
   position: absolute;
   left: 0;
   bottom: -100%;
+
   width: 100%;
   height: 100%;
+
   background: linear-gradient(90deg, #a2279c, #4f0e5f);
+
   transition: 0.4s;
   z-index: -1;
 }
@@ -432,18 +482,25 @@ ul li {
   bottom: 0;
 }
 
+/* ================= BUY NOW BUTTON ================= */
+
 .buy-now-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   margin-top: 18px;
   padding: 8px 28px;
+
   background: linear-gradient(90deg, #a2279c, #4f0e5f);
   color: #fff;
+
   text-decoration: none;
   border-radius: 50px;
+
   font-size: 12px;
   font-weight: 600;
+
   transition: 0.3s ease;
 }
 
@@ -603,11 +660,12 @@ ul li {
 }
 
 .featured-content h2 {
-  font-size: 1rem;
+  font-size: 1.6rem;
   color: #000000;
   margin-left: 40px;
   text-transform: capitalize;
   font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .logo-slider {
@@ -723,6 +781,7 @@ ul li {
   line-height: 1.1;
   color: #111;
   margin-bottom: 20px;
+  letter-spacing: 2px;
 }
 
 .author-content p {
@@ -940,6 +999,7 @@ LEFT CONTENT
   line-height: 1.1;
   font-weight: 500;
   margin-bottom: 50px;
+  letter-spacing: 2px;
 }
 
 /*====================================
@@ -1034,7 +1094,7 @@ CARD TITLE
     margin-bottom:8px;
     font-weight:500;
     line-height:1.3;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 
 /*====================================
@@ -1452,9 +1512,9 @@ SMALL MOBILE
 
 .small-title {
   color: #ffffff;
-  font-size: 13px;
-  letter-spacing: 3px;
-  font-weight: 500;
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 300;
   font-family: "Karla", sans-serif;
 }
 
@@ -1463,6 +1523,7 @@ SMALL MOBILE
   font-size: 68px;
   font-weight: 400;
   margin-top: 10px;
+  letter-spacing: 2px;
 }
 
 .view-more {
@@ -1667,6 +1728,7 @@ SMALL MOBILE
   color: #161616;
   max-width: 1000px;
   margin: auto;
+  letter-spacing: 1px;
 }
 
 /* Author */
@@ -1892,13 +1954,14 @@ SMALL MOBILE
   line-height: 1.05;
   font-weight: 900;
   color: #111;
-  letter-spacing: -2px;
+  letter-spacing: 2px;
 }
 
 .main-bold {
   font-size: clamp(20px, 2vw, 28px);
   line-height: 1.3;
   margin-bottom: 18px;
+  letter-spacing: 1px;
 }
 
 .stores-left p {
@@ -2195,6 +2258,7 @@ SMALL MOBILE
   color: #101010;
   margin-bottom: 12px;
   line-height: 1.1;
+  letter-spacing: 2px;
 }
 
 .book-content h4 {
@@ -2371,6 +2435,7 @@ SMALL MOBILE
   font-weight: 700;
   color: #222;
   margin-bottom: 18px;
+  letter-spacing: 2px;
 }
 
 .title-left p {
@@ -2587,6 +2652,7 @@ SMALL MOBILE
   line-height: 1.15;
   font-weight: 750;
   color: #000;
+  letter-spacing: 2px;
 }
 
 .blog-right {
@@ -2606,6 +2672,7 @@ SMALL MOBILE
   line-height: 1.6;
   font-weight: 700;
   margin: 0;
+  letter-spacing: 1px;
 }
 
 /* ================= BLOG CARDS ================= */
@@ -2905,6 +2972,7 @@ SMALL MOBILE
   line-height: 1.2;
   color: #000;
   margin-bottom: 25px;
+  letter-spacing: 2px;
 }
 
 .left p {
@@ -3160,10 +3228,11 @@ SMALL MOBILE
 }
 
 .footer-left h2 {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
   line-height: 1.2;
   font-weight: 500;
   margin-bottom: 15px;
+  letter-spacing: 1px;
 }
 
 .footer-left p {
@@ -3497,8 +3566,9 @@ SMALL MOBILE
   font-size: 17px;
   line-height: 1.8;
   color: #555;
-  margin-bottom: 25px;
-  font-family: "Syne", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
 }
 
 .buy-btn {
