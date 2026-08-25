@@ -311,7 +311,7 @@ ul li {
 .scroll-track {
   display: flex;
   width: max-content;
-  animation: marquee 35s linear infinite;
+  animation: marquee 53s linear infinite;
 }
 
 .scroll-text:hover .scroll-track {
@@ -679,7 +679,7 @@ ul li {
   align-items: center;
   gap: 60px;
   width: max-content;
-  animation: slideLogos 15s linear infinite;
+  animation: slideLogos 26s linear infinite;
 }
 
 .logo-track img {
@@ -1991,7 +1991,7 @@ SMALL MOBILE
   display: flex;
   gap: 30px;
   width: max-content;
-  animation: scroll 85s linear infinite;
+  animation: scroll 130s linear infinite;
 }
 
 .stores-slider:hover .marquee-track {
