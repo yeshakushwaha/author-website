@@ -966,7 +966,10 @@ ul li {
 .partner-section {
   position: relative;
   padding: 100px 7%;
-  background: linear-gradient(90deg, #000000 0%, #000000 50%, #434343 100%);
+  background: url(./img/faq-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
   overflow: hidden;
 }
 

@@ -385,11 +385,6 @@ const momentsImages = [
     {
         src: "img/gallery/14.JPG",
         alt: "Beautiful moment"
-    },
-
-    {
-        src: "img/gallery/15.JPG",
-        alt: "Beautiful moment"
     }
 
 ];
@@ -399,9 +394,9 @@ const momentsImages = [
    SETTINGS
 ========================================= */
 
-const AUTO_PLAY_SPEED = 3500;
+const AUTO_PLAY_SPEED = 1500;
 
-const MOVE_SPEED = 700;
+const MOVE_SPEED = 500;
 
 
 /* =========================================
