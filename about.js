@@ -59,3 +59,79 @@ document.addEventListener("DOMContentLoaded", () => {
 
   observer.observe(awards);
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const cards = document.querySelectorAll(".award-card");
+
+    /* =====================================
+       SCROLL ANIMATION
+    ===================================== */
+
+    if ("IntersectionObserver" in window) {
+
+        const observer = new IntersectionObserver(
+            function (entries, observer) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("award-visible");
+
+                        observer.unobserve(entry.target);
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.15
+            }
+        );
+
+
+        cards.forEach(function (card) {
+
+            card.classList.add("award-animation");
+
+            observer.observe(card);
+
+        });
+
+    }
+
+
+    /* =====================================
+       IMAGE CHECK
+    ===================================== */
+
+    const images =
+        document.querySelectorAll(".award-image img");
+
+
+    images.forEach(function (image) {
+
+        image.addEventListener("error", function () {
+
+            console.error(
+                "IMAGE NOT FOUND:",
+                image.src
+            );
+
+        });
+
+
+        image.addEventListener("load", function () {
+
+            console.log(
+                "IMAGE LOADED:",
+                image.src
+            );
+
+        });
+
+    });
+
+});

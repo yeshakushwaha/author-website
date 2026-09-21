@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
 /* ========================================
    HERO SECTION
 ======================================== */
@@ -130,7 +132,7 @@
 
 .biography-section {
   width: 100%;
-  padding: 0 20px 16px;
+  padding: 40px 20px 71px;
 }
 
 /* =========================================
@@ -160,23 +162,16 @@
 
 .biography-title {
   position: absolute;
-
+  font-family: "Karla", sans-serif;
   top: 0;
   left: 0;
-
   background: linear-gradient(90deg, #6827a2, #e475a3);
-
   color: #ffffff;
-
   font-size: 16px;
   font-weight: 700;
-
   letter-spacing: 0.2px;
-
   padding: 10px 17px;
-
   min-width: 120px;
-
   text-align: center;
 }
 
@@ -324,250 +319,522 @@
   }
 }
 
-/* =========================================
+
+
+/* ==========================================
    AWARDS SECTION
-========================================= */
+========================================== */
 
 .awards-section {
-  width: 100%;
-  padding: 0 20px 30px;
+    position: relative;
+    width: 100%;
+    padding: 100px 5% 110px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at center 65%,
+            #62544d 0%,
+            #302a27 32%,
+            #171513 65%,
+            #0b0b0a 100%
+        );
+
+    color: white;
 }
 
-/* =========================================
-   AWARDS CONTAINER
-========================================= */
 
-.awards-container {
-  position: relative;
+/* ==========================================
+   STARS
+========================================== */
 
-  width: 100%;
-  max-width: 1160px;
+.awards-stars {
+    position: absolute;
+    inset: 0;
 
-  margin: 0 auto;
+    pointer-events: none;
 
-  background: #ffffff;
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.8) 1px,
+            transparent 1.5px
+        ),
+        radial-gradient(
+            circle,
+            rgba(210,160,95,0.65) 1px,
+            transparent 1.5px
+        );
 
-  border: 1px solid #dddddd;
+    background-size:
+        150px 130px,
+        230px 190px;
 
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    background-position:
+        20px 10px,
+        80px 40px;
 
-  padding: 61px 32px 30px;
+    opacity: 0.55;
 }
 
-/* =========================================
-   SECTION TITLE
-========================================= */
 
-.awards-title {
-  position: absolute;
+/* ==========================================
+   HEADER
+========================================== */
 
-  top: 0;
-  left: 0;
-
-  display: inline-flex;
-  align-items: center;
-
-  min-height: 36px;
-
-  padding: 9px 17px;
-
-  background: linear-gradient(90deg, #6827a2, #e475a3);
-
-  color: #ffffff;
-
-  font-size: 16px;
-
-  line-height: 1;
-
-  font-weight: 700;
+.awards-header {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto 10px;
 }
 
-/* =========================================
-   TWO COLUMN GRID
-========================================= */
 
-.awards-grid {
-  display: grid;
+/* Small heading */
 
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.awards-eyebrow {
+    display: block;
 
-  column-gap: 34px;
+    margin-bottom: 22px;
+
+    color: #c9995c;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: 6px;
+
+    text-transform: uppercase;
 }
 
-/* =========================================
-   COLUMN
-========================================= */
 
-.awards-column {
-  width: 100%;
+/* Main heading */
+
+.awards-header h2 {
+    margin: 0;
+    color: #d9a765;
+    font-size: clamp(42px, 5vw, 70px);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    text-transform: capitalize;
 }
 
-/* =========================================
-   AWARD ITEM
-========================================= */
 
-.award-item {
-  position: relative;
-
-  display: flex;
-
-  align-items: flex-start;
-
-  min-height: 66px;
-
-  padding: 12px 8px 12px 56px;
-
-  border-top: 1px solid #cdbfc6;
+/* Gold line */
+.awards-line {
+    width: 52px;
+    height: 1px;
+    margin: 28px auto 20px;
+    background: #c9985d;
+    box-shadow:
+        0 0 12px rgba(201,152,93,0.5);
 }
 
-/* Remove unnecessary top border from first item */
 
-.award-item:first-child {
-  border-top: 1px solid #cdbfc6;
-}
+/* Description */
 
-/* =========================================
-   PINK VERTICAL MARKER
-========================================= */
+.awards-header p {
+    margin: 0 auto;
 
-.award-marker {
-  position: absolute;
+    max-width: 650px;
 
-  left: 0;
-  top: 0;
+    color: rgba(255,255,255,0.62);
 
-  width: 15px;
-  height: 34px;
-
-  background: rgb(79, 14, 95);
-}
-
-/* =========================================
-   AWARD TEXT
-========================================= */
-
-.award-item p {
-  margin: 0;
-
-  color: #151515;
-
-  font-size: 13px;
-
-  line-height: 1.55;
-
-  font-weight: 600;
-}
-
-/* =========================================
-   HOVER EFFECT
-========================================= */
-
-.award-item {
-  transition:
-    background-color 0.25s ease,
-    transform 0.25s ease;
-}
-
-.award-item:hover {
-  background-color: #faf8fb;
-}
-
-.award-item:hover .award-marker {
-  transform: scaleY(1.08);
-}
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 900px) {
-  .awards-section {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .awards-container {
-    padding: 60px 22px 25px;
-  }
-
-  .awards-grid {
-    column-gap: 25px;
-  }
-
-  .award-item {
-    padding-left: 48px;
-  }
-
-  .award-marker {
-    width: 13px;
-  }
-
-  .award-item p {
-    font-size: 13px;
-  }
-}
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 650px) {
-  .awards-section {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .awards-container {
-    padding: 58px 16px 20px;
-  }
-
-  .awards-title {
     font-size: 14px;
 
-    padding: 9px 14px;
-
-    min-height: 35px;
-  }
-
-  .awards-grid {
-    grid-template-columns: 1fr;
-
-    column-gap: 0;
-  }
-
-  .award-item {
-    min-height: auto;
-
-    padding: 13px 5px 13px 42px;
-  }
-
-  .award-marker {
-    width: 12px;
-    height: 32px;
-  }
-
-  .award-item p {
-    font-size: 12.5px;
-
-    line-height: 1.6;
-  }
+    line-height: 1.7;
 }
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
 
-@media (max-width: 400px) {
-  .awards-container {
-    padding-left: 14px;
-    padding-right: 14px;
-  }
+/* ==========================================
+   GRID
+========================================== */
 
-  .award-item {
-    padding-left: 38px;
-  }
+.awards-grid {
+    position: relative;
 
-  .award-item p {
-    font-size: 12px;
-  }
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    column-gap: 25px;
+
+    row-gap: 75px;
+
+    align-items: start;
+}
+
+
+/* ==========================================
+   AWARD CARD
+
+   IMPORTANT:
+   opacity is 1 by default.
+   So JS fail hone par bhi
+   images visible rahengi.
+========================================== */
+
+.award-card {
+    position: relative;
+
+    width: 100%;
+
+    min-width: 0;
+
+    text-align: center;
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+    transition:
+        transform 0.45s ease,
+        opacity 0.6s ease;
+}
+
+
+/* ==========================================
+   IMAGE CONTAINER
+========================================== */
+
+.award-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 330px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    margin-bottom: 22px;
+}
+
+
+/* Golden glow */
+
+.award-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 210px;
+
+    height: 210px;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(206,158,91,0.25),
+            rgba(206,158,91,0.08) 40%,
+            transparent 72%
+        );
+
+    filter: blur(15px);
+
+    pointer-events: none;
+}
+
+
+/* Ground shadow */
+
+.award-image::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+
+    height: 18px;
+
+    left: 50%;
+
+    bottom: 5px;
+
+    transform: translateX(-50%);
+
+    background: rgba(0,0,0,0.75);
+
+    border-radius: 50%;
+
+    filter: blur(9px);
+}
+
+
+/* ==========================================
+   ACTUAL IMAGE
+========================================== */
+
+.award-image img {
+    position: relative;
+
+    z-index: 3;
+
+    display: block;
+
+    width: auto;
+
+    max-width: 85%;
+
+    height: 300px;
+
+    object-fit: contain;
+
+    object-position: center bottom;
+
+    filter:
+        drop-shadow(
+            0 18px 18px rgba(0,0,0,0.5)
+        );
+
+    transition:
+        transform 0.45s ease,
+        filter 0.45s ease;
+}
+
+
+/* ==========================================
+   HOVER
+========================================== */
+
+.award-card:hover {
+    transform: translateY(-8px);
+}
+
+
+.award-card:hover .award-image img {
+    transform: scale(1.04);
+
+    filter:
+        drop-shadow(
+            0 25px 25px rgba(0,0,0,0.6)
+        )
+        drop-shadow(
+            0 0 18px rgba(216,166,99,0.18)
+        );
+}
+
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.award-card h3 {
+    margin: 0 8px;
+    color: #f0e4d4;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: 1px;
+}
+
+
+/* Small gold line */
+
+.award-card h3::after {
+    content: "";
+
+    display: block;
+
+    width: 24px;
+
+    height: 1px;
+
+    margin: 11px auto 9px;
+
+    background: #b98a51;
+}
+
+
+/* Description */
+
+.award-card p {
+    margin: 0 auto;
+
+    max-width: 210px;
+
+    color: rgba(255,255,255,0.55);
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   SECOND ROW
+   5 + 3 CENTERED
+========================================== */
+
+.award-card:nth-child(6) {
+    grid-column: 2;
+}
+
+.award-card:nth-child(7) {
+    grid-column: 3;
+}
+
+.award-card:nth-child(8) {
+    grid-column: 4;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1100px) {
+
+    .awards-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        column-gap: 20px;
+
+        row-gap: 60px;
+    }
+
+
+    .award-card:nth-child(6),
+    .award-card:nth-child(7),
+    .award-card:nth-child(8) {
+        grid-column: auto;
+    }
+
+
+    .award-image {
+        height: 300px;
+    }
+
+
+    .award-image img {
+        height: 275px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE TABLET
+========================================== */
+
+@media (max-width: 750px) {
+
+    .awards-section {
+        padding:
+            80px 25px
+            90px;
+    }
+
+
+    .awards-header {
+        margin-bottom: 50px;
+    }
+
+
+    .awards-header h2 {
+        font-size: 45px;
+    }
+
+
+    .awards-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        column-gap: 25px;
+
+        row-gap: 55px;
+    }
+
+
+    .award-image {
+        height: 290px;
+    }
+
+
+    .award-image img {
+        height: 270px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 500px) {
+
+    .awards-section {
+        padding:
+            70px 20px
+            80px;
+    }
+
+
+    .awards-eyebrow {
+        font-size: 8px;
+
+        letter-spacing: 4px;
+    }
+
+
+    .awards-header h2 {
+        font-size: 36px;
+
+        line-height: 1.1;
+    }
+
+
+    .awards-header p {
+        font-size: 11px;
+    }
+
+
+    .awards-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 380px;
+    }
+
+
+    .award-image {
+        height: 350px;
+    }
+
+
+    .award-image img {
+        height: 320px;
+
+        max-width: 92%;
+    }
+
+
+    .award-card h3 {
+        font-size: 18px;
+    }
 }
