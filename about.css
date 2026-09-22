@@ -474,7 +474,7 @@
 
     column-gap: 25px;
 
-    row-gap: 75px;
+    row-gap: 15px;
 
     align-items: start;
 }
@@ -525,7 +525,7 @@
 
     justify-content: center;
 
-    margin-bottom: 22px;
+    margin-bottom: 4px;
 }
 
 
@@ -569,13 +569,13 @@
 
     position: absolute;
 
-    width: 150px;
+    width: 80px;
 
-    height: 18px;
+    height: 8px;
 
     left: 50%;
 
-    bottom: 5px;
+    bottom: 10px;
 
     transform: translateX(-50%);
 
